@@ -1,0 +1,188 @@
+body{
+    font-family: sans-serif;
+}
+
+/*slider*/
+.slider .top-blue{
+    position: relative;
+    z-index: 1;
+    height: 0px;
+    border: 33px #00304f solid;
+}
+.slider .carousel-inner{
+    position: relative;
+    z-index: 2;
+}
+.slider .caption{
+    position: absolute;
+    z-index: 5;
+    bottom: 40px;
+    left: 275px;
+    color: white;
+}
+.slider .title p.mid{
+    font-weight: bold;
+    margin-top: -27px;
+}
+.slider .title p.bot{
+    margin-top: -20px;
+}
+.slider .title{
+    font-size: 45px;
+    text-align: center;
+}
+.slider .shadow{
+    position: absolute;
+    z-index: 4;
+    bottom: 0px;
+}
+/*akhir slider*/
+
+/*about*/
+.about{
+    background-color: #f5f5f5;
+    position: relative;
+}
+.about .caption{
+    padding-top: 95px;
+    padding-bottom: 68px;
+}
+.about p{
+    font-size: 12px;
+}
+.about .title h2{
+    font-size: 45px;
+    margin-top: 14px;
+}
+.about .subtitle p{
+    font-size: 18px;
+}
+.about .subtitle p.mid{
+    margin-top: 29px;
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #00304f;
+}
+.about .border{
+    padding-bottom: 241px;
+}
+.about h2.bot{
+    text-align: left;
+    position: absolute;
+    z-index: 3;
+    bottom: 18px;
+    right: 100px;
+    font-size: 45px;
+    color: #00304f;
+}
+
+
+.work{
+    position: relative;
+}
+.work img.about1{
+    position: relative;
+    z-index: 1;
+    top: -130px;
+    left: 0px;
+}
+.work img.about2{
+    position: absolute;
+    z-index: 5;
+    bottom: -275px;
+    right:0px;
+}
+.work p{
+    font-size: 18px;
+    position: absolute;
+    z-index: 2;
+    top: 45px;
+    right: 0px;
+}
+
+
+.vision{
+    background-color: #e5e2db;
+    margin-top: 401px;
+    position: relative;
+}
+.vision .title h2{
+    padding-top: 93px;
+    font-size: 45px;
+    color: #00304f;
+}
+.vision .subtitle p{
+    color: #989794;
+    font-size: 16px;
+    margin-top: 31px;
+}
+.vision .title2 h2{
+    padding-top: 55px;
+    font-size: 45px;
+    color: #00304f;
+}
+.vision .subtitle2 p{
+    color: #989794;
+    font-size: 16px;
+    margin-top: 31px;
+    padding-bottom: 174px;
+}
+.vision img{
+    position: absolute;
+    z-index: 1;
+    top: 72px;
+    right: 0px;
+}
+/*akhir about*/
+
+/*portfolio*/
+.portfolio{
+    background-color: #001625;
+}
+.portfolio h2{
+    padding-top: 123px;
+    padding-bottom: 71px;
+    color: white;
+    font-size: 45px;
+}
+.portfolio .caption{
+    position: absolute;
+    z-index: 2;
+    bottom: 42px;
+    left: 42px;
+}
+.portfolio .caption h3{
+    color: white;
+}
+.portfolio .caption p{
+    color: white;
+}
+.tz-gallery{
+    position: relative;
+    z-index: 1;
+}
+.tz-gallery .thumbnail {
+    padding: 0;
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+    transition: 0.5s ease-in-out;
+    box-shadow: 10 10px 15px rgba(0, 0, 0, 0.06);
+}
+
+.tz-gallery .thumbnail:hover {
+    transform: scale(1.02);
+}
+
+.tz-gallery .lightbox img {
+    border-radius: 0 0 0 0;
+}
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+.portfolio p.bot{
+    margin-top: -71px;
+    color: #6e6a5a;
+    padding-bottom: 122px;
+}

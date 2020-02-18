@@ -1,0 +1,154 @@
+{% extends layout %}
+{% block title %}Cara Pemasangan - {% endblock %}
+{% block menu %}about{% endblock %}
+{% block content %}
+	<div class="back-white outer-inside-pagesl">
+		<div class="prelatife container">
+			<div class="clear height-205"></div>
+			
+			<div class="inside-pcontent-in content-text">
+				<div class="top-content">
+					<div class="row">
+						<div class="col-md-9 col-sm-8">
+							<h1 class="title-pages">Cara Pemasangan Zelltech</h1>
+						</div>
+						<div class="col-md-3 col-sm-4">
+							<div class="out-breadcrumbs">
+								<ol class="breadcrumb">
+								  <li><a href="{{ path('homepage') }}"> <img src="{{ app.request.baseurl }}/asset/images/ls-icon-home.png" alt=""> </a></li>
+								  <li class="active">CARA PEMASANGAN</li>
+								</ol> <div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div> <div class="clear height-50"></div><div class="height-40"></div>
+				<div class="middle-content">
+					<div class="row text-topindustry">
+						<div class="col-md-8">
+							<span>Untuk aplikasi atap industri</span>
+							<div class="clear height-15"></div>
+							<div class="list-data-carapasng">
+								<div class="row">
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/cara_pasang/pict-it-x1.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/cara_pasang/pict-it-x2.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/cara_pasang/pict-it-x3.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/cara_pasang/pict-it-x4.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/cara_pasang/pict-it-x5.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-6">
+										<div class="item">
+											<img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/cara_pasang/pict-it-x6.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="padding-left-15 right-cont-carapasang">
+								<span>Petunjuk:</span>
+								<div class="clear height-15"></div>
+								<ol>
+									<li>Buka roll Zelltech pada atap</li>
+									<li>Gelindingkan Zelltech untuk menutupi area yang diinginkan</li>
+									<li>Pertahankan posisi Zelltech dengan selotip / plakban</li>
+									<li>Sekrup zelltech pada rangka atap</li>
+									<li>Tutup celah insulasi Zelltech dengan selotip / plakban tahan air</li>
+									<li>Pastikan tidak ada celah antara atap dan Zelltech.</li>
+								</ol>
+								<div class="clear height-35"></div>
+								<span class="red">Perhatian:</span>
+								<div class="clear height-5"></div>
+								<p>Instalasi yang tidak baik akan berdampak pada hasil
+								akhir kemampuan insulasi dan penghematan listrik.
+								Untuk memastikan kesempurnaan pemasangan, <br>
+								<a href="#">hubungi tim Solusi Panas sekarang juga.</a></p>
+
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			{# End Content text #} <div class="clear height-50"></div><div class="height-35"></div>
+
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="clear"></div>
+	<div class="back-bottom-banner-fcsbott prelatife">
+		<div class="prelatife container"> <div class="clear height-25"></div>
+			<div class="text-bottomfcs-bannerls text-center">
+				<div class="height-3"></div>
+				<span>Kami akan menemukan solusi atap terbaik!</span>&nbsp;&nbsp;<span class="p2_white">Dapatkan penawaran terbaik dari kami.</span>
+				<a href="javascript:;" type="button" data-toggle="modal" data-target="#myModal" class="bt-view-penawaran-home margin-left-23"></a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  			<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title"><img src="{{ app.request.baseurl }}/asset/images/lgo-solusiatap-header.png" style="width: 75px;" alt="">&nbsp;&nbsp;Request Penawaran</h4>
+		      </div>
+		      <div class="modal-body">
+		        	<div class="box-form-penawaran">
+		        		<form method="post" action="{{ path('s_penawaran') }}">
+						  <div class="form-group">
+						    <label for="exampleInputNama">Nama</label>
+						    <input name="Request[nama]" type="text" class="form-control" id="exampleInputNama" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Email address</label>
+						    <input name="Request[email]" type="email" class="form-control" id="exampleInputEmail1" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputNama">Telpon</label>
+						    <input name="Request[telpon]" type="text" class="form-control" id="exampleInputNama" required>
+						  </div>
+						   <div class="form-group">
+						    <label for="exampleInputNama">Pesan</label>
+						    <textarea name="Request[pesan]" class="form-control" rows="3"></textarea>
+						  </div>
+						  
+						  <button type="submit" class="btn btn-primary">SUBMIT</button>
+						</form>
+		        		<div class="clear"></div>
+		        	</div>
+		      </div>
+
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+{% endblock %}

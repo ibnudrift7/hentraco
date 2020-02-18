@@ -1,0 +1,139 @@
+.slider .top-blue{
+    position: relative;
+    z-index: 1;
+    height: 0px;
+    border: 33px #0077BD solid;
+}
+.slider .carousel-inner{
+    position: relative;
+    z-index: 2;
+}
+.slider .caption{
+    position: absolute;
+    z-index: 5;
+    color: white;
+    bottom: 0px;
+}
+.slider .shadow{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+}
+.slider .caption .title{
+    font-size: 55px;
+}
+.slider .caption .subtitle{
+    font-size: 39px;
+}
+/*akhir slider*/
+.workshop{
+	height: 1249px;
+	background-color: #f5f5f5;
+}
+.workshop .title{
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 96px;
+}
+.workshop .subtitle{
+	font-size: 45px;
+	color: #0077BD;
+	margin-top: 10px;
+	margin-bottom: 110px;
+}
+.workshop .title-content{
+	font-size: 45px;
+	color: #0077BD;
+}
+.workshop .content{
+	font-size: 18px;
+}
+.workshop .credits{
+	margin-top: 90px;
+}
+.workshop img{
+	/*margin-left: -10px;*/
+}
+.workshop a{
+	color: #939393;
+	margin: 0 20px;
+}
+.expertise{
+    background-image: url('../images/bg-2-service.png');
+	height: 2392px;
+}
+.expertise .title-expertise{
+	font-size: 84px;
+	margin-bottom: -30px;
+	color: #ffffff;
+	margin-top: 325px;
+}
+.expertise .brown{
+	background-color: #a59473;
+	height: 463px;
+}
+.expertise .white{
+	background-color: #ffffff;
+	height: 463px;
+}
+.expertise .carousel-inner{
+    position: relative;
+    z-index: 1;
+}
+.expertise .content{
+    position: relative;
+    z-index:3;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+.expertise .isi{
+	padding:  20px 50px;
+	height: 300px;
+}
+.expertise .title-content{
+	font-size: 29px;
+	margin-bottom: 29px;
+}
+.expertise .content-expertise{
+	font-size: 14px;
+}
+.expertise hr{
+	border-color: #a1a1a1;
+	margin: 10px 0;
+}
+.expertise a{
+	font-size: 14px;
+	font-weight: bold;
+	
+}
+.expertise .link{
+	margin-left: 50px;
+	margin-top: 120px;
+}
+.capabilities{
+	height: 513px;
+}
+.capabilities .title-capabilities{
+	font-size: 45px;
+	margin-bottom: 26px;
+	margin-top: 70px;
+	color: #0077BD;
+}
+.capabilities .title-content{
+	color: #0077BD;
+	height: 35px;
+	font-weight: bold;
+	font-size: 17px;	
+}
+.capabilities hr{
+	margin: 20px 0;
+	border-width: 2px;
+	border-color: #a59473;
+}
+.capabilities ul {
+}
+.capabilities ul li{
+	margin-left: -25px;
+	font-size: 14px;
+}

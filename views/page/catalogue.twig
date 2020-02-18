@@ -1,0 +1,115 @@
+{% extends layout %}
+{% block title %}Catalogue - {% endblock %}
+{% block menu %}catalogue{% endblock %}
+{% block content %}
+	<script type="text/javascript">
+		$(function(){
+			// var logo_src = $('.lgo-web-aof img').attr('src');
+			// $('.lgo-web-aof img').attr('src', '{{ app.request.baseurl }}/asset/images/logo-aof-website-white.png');
+
+			$(window).load(function(){
+				 var newWindowWidth = $(window).width();
+				if(newWindowWidth < 768){
+
+				} else{
+					var logo_src = $('.lgo-web-aof img').attr('src');
+					$('.lgo-web-aof img').attr('src', '{{ app.request.baseurl }}/asset/images/logo-aof-website-white.png');
+				};				
+			});
+
+		});
+	</script>
+	<div class="back-top-outer-pageinsidess catalogue">
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	
+	<div class="back-white">
+		<div class="prelatife container">
+			<div class="clear height-50"></div><div class="height-45"></div>
+				<div class="tengah mw-924 text-center content-t-homebottom-dt">
+					<div class="titles text-center">Catalogue</div>
+					<div class="clear height-20"></div>
+					<span>Ardent Office Furniture provide the detailed product information in our catalogue. Fill the form below and we’ll send our catalogue right away.</span>
+					<div class="clear height-20"></div>
+					<div class="clear height-50"></div>	<div class="clear"></div>
+				</div>
+
+				<div class="box-form-catalog">
+					<form method="post" action="">
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Fullname</label>
+					    <input type="text" name="catalog[fullname]" class="form-control" id="exampleInputEmail1">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail2">Company Name</label>
+					    <input type="text" name="catalog[company_name]" class="form-control" id="exampleInputEmail2">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail3">Phone</label>
+					    <input type="text" name="catalog[phone]" class="form-control" id="exampleInputEmail3">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail4">Mobile</label>
+					    <input type="text" name="catalog[mobile]" class="form-control" id="exampleInputEmail4">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail">Email</label>
+					    <input type="email" name="catalog[email]" class="form-control" id="exampleInputEmail">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail">Address</label>
+					    <textarea name="catalog[address]" rows="3" class="form-control"></textarea>
+					  </div>
+
+					  <button type="submit" class="btn btn-info">Submit</button>
+					</form>
+					<div class="clear"></div>
+				</div>
+
+				<div class="clear height-50"></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="back-black-bottomfl-homebottom-fcss">
+			<div class="prelatife container">
+				
+				<div class="mw-910 tengah text-left box-cont-middlebottom-fcshuman">
+					<div class="disn-block pict-left"><img src="{{ app.request.baseurl }}/asset/images/back-impo-human-aof2.png" alt=""></div>
+					<div class="disn-block desc-text">
+						<div class="clear height-25"></div>
+						<span class="t1">How can we help you? &nbsp;</span><span>Fill the fields below or dial <b>675-9055</b> for a help...</span>
+						<div class="clear height-20"></div>
+						<div class="bx-forms-botfcs">
+							<form class="form-inline" method="post" action="">
+								  <div class="form-group">
+								    <label class="sr-only" for="exampleInputName3">Name</label>
+								    <input type="text" name="inquire[name]" class="form-control" id="exampleInputName3" placeholder="Name" required>
+								  </div>&nbsp;&nbsp;&nbsp;
+								  <div class="form-group">
+								    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+								    <input type="email" name="inquire[email]" class="form-control" id="exampleInputEmail3" placeholder="Email" required>
+								  </div>&nbsp;&nbsp;&nbsp;
+								  <div class="form-group">
+								    <select class="form-control" name="inquire[choose_option]" >
+								      <option>I need assistance for...</option>
+								      <option>2</option>
+								      <option>3</option>
+								    </select>
+								  </div>&nbsp;&nbsp;&nbsp;
+								  <button type="submit" class="btn btn-default-blueinquire"></button>
+								</form>
+							<div class="clear"></div>
+						</div>
+
+						<div class="clear"></div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+{% endblock %}

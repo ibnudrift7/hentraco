@@ -1,0 +1,108 @@
+{% extends layout %}
+{% block title %}Portfolio - {% endblock %}
+{% block menu %}portfolio{% endblock %}
+{% block content %}
+<section class="section section--intro align-center clearfix section-homebwhitebl insides-pabout-inner section-topcont-contact">
+	<div class="wrapper">
+		<div class="clear height-15"></div>
+		<div class="row">
+			<div class="span11 center-block">
+				<div class="intro__block span9 center-block animate mb-0">
+					<div class="content-text">
+						<h1 class="child-title-p">PORTFOLIO</h1>
+					</div>
+					<div class="clear"></div>
+					<div class="visible-lg visible-md">
+						<h2 class="title">
+							Let our work result <br> speak for itself.
+					</h2>
+					</div>
+					<div class="visible-xs visible-sm">
+						<h2 class="title">
+							Let our work result speak for itself.
+						</h2>
+					</div>
+
+					<div class="clear clearfix"></div>
+					
+				</div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		
+		<div class="listing-lproduct-list">
+				<div class="row default">
+					{% if DataPortfolio %}
+						{% for item2 in DataPortfolio %}
+						{% for item in item2 %}
+							<div class="col-md-6">
+								<div class="items">
+									<div class="pict">
+											<ul id="light-gallery" class="gallery light-gallery" style="list-style:none;margin:0px; padding:0;">
+												{% for key, it_child in item.images %}
+												<li data-src="{{ app.request.baseurl }}/images/portfolio/{{ item.folder }}/{{ it_child}}" data-sub-html="Gianni Furniture Surabaya - {{ item.name|title }}">
+													{% if key == 0 %}
+										        	<a class="default-image" href="{{ app.request.baseurl }}/images/portfolio/{{ item.folder }}/{{ it_child }}">
+										        		<img src="{{ app.request.baseurl }}/images/portfolio/{{ item.thumb }}" alt="" class="img-responsive">
+										            </a>
+										            {% endif %}
+										        </li>
+												{% endfor %}
+									    	</ul>
+									</div>
+									<div class="clear height-30"></div>
+									<div class="desc">
+										<h5 class="titles">{{ item.name }}</h3>
+										<div class="clear"></div>
+											<ul id="light-gallery" class="gallery light-gallery" style="list-style:none;margin:0px; padding:0;">
+											{% for key, it_child in item.images %}
+												<li data-src="{{ app.request.baseurl }}/images/portfolio/{{ item.folder }}/{{ it_child }}" data-sub-html="Gianni Furniture Surabaya - {{ item.name|title }}">
+													{% if key == 0 %}
+										        	<a class="view-imges" href="{{ app.request.baseurl }}/images/portfolio/{{ item.folder }}/{{ it_child }}">
+										        		VIEW IMAGES
+										            </a>
+										            {% endif %}
+										        </li>
+												{% endfor %}
+									    	</ul>
+
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+							<div class="clear height-50"></div>
+						{% endfor %}
+					{% endif %}
+				</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="section clearfix cont-bottom-home-lih">
+	<div class="wrapper">
+		<div class="row default text-center">
+			<div class="col-md-12">
+				<div class="clear height-10"></div>
+					<div class="text-center">
+						<p>Contact Gianni Furniture&rsquo;s consultant regarding your appointment for a<br />tour to our showroom.</p>
+						<p class="mb-0"><strong>+62 31 732 5566</strong><br />
+							or <a href="{{ url('contactus') }}">click here</a> to contact us</p>
+					</div>
+					<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="clear"></div>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<style type="text/css">
+	.listing-lproduct-list .items .desc h5.titles{
+		font-size:20px;
+	}
+</style>
+{% endblock %}

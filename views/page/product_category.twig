@@ -1,0 +1,74 @@
+{% extends layout %}
+{% block title %}{{ lang_message.t_nproducts_cat_title|raw }} - {% endblock %}
+{% block menu %}product{% endblock %}
+{% block content %}
+<div class="outers_cont_inside_page back-white">
+
+	<h1 style="visibilty: none; display:none;">{{ lang_message.t_nproducts_cat_title|raw }} - {{ app_name }}</h1>
+	<div class="insides_toppage_blocks">
+		<div class="blocks_bottom_intop_page pg_products">
+			<div class="insides">
+				<div class="blocks_top_ill">
+					<h2 class="title_page">{{ lang_message.t_nproducts_cat_title|raw }}</h2>
+				</div>
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	
+	<section class="default_sc back-grey" id="block_product_home">
+		<div class="prelatife container">
+			<div class="insides text-centers">
+
+				<h4 class="sub_title">{{ lang_message.t_hmpage_centers_prdHOme|raw }}</h4>
+				<div class="clear"></div>
+				<div class="clear height-50"></div>
+
+				<div class="lists_product_home">
+						{% if list_data_Categoryp %}
+						<div class="row">
+								{% for keys, item in list_data_Categoryp %}
+							<div class="col-md-3 col-sm-6">
+							    <div class="items">
+									<div class="pict prelatife">
+											<img src="{{ app.request.baseurl }}/image.php/{{ item.pict }}?width=348&amp;height=249&amp;cropratio=348:249&amp;image=/images/category/{{ item.pict }}" alt="" class="img-responsive center-block">
+										<div class="layer_hover_img">
+				                            <div class="vertical-center">
+				                              <div class="box-tview-project in">
+				                                <a href="{{ path('products', {'id': keys, lang: lang_active}) }}">
+				                                	<i class="fa fa-search"></i>
+				                                	<span class="clear"></span>
+				                                	{{ lang_message.t_views_product|raw }}
+				                                </a>
+				                              </div>
+				                            </div>
+				                          </div>
+									</div>
+									<div class="descs text-center">
+										<a href="{{ path('products', {'id': keys, lang: lang_active}) }}">
+											<span class="titles">{{ item.title|title }}</span>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+								{% endfor %}
+
+						</div>
+						{% endif %}
+					<div class="clear"></div>
+				</div>
+				<div class="clear height-5"></div>
+				{# <div class="text-center mores_clickhome_products">
+					<a href="{{ path('products') }}" class="btns_greendefaults">CLICK HERE TO VIEW ALL PRODUCTS</a>
+				</div> #}
+
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+	{# end product home #}
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends layout %}
+{% block title %}{{ data.title|title }} - Our Products - {% endblock %}
+{% block menu %}product{% endblock %}
+{% block content %}
+<div class="outers-middle-contents prelatife back-greysmooth">
+	<div class="ill-tops-pageinside pict-full prelatife product-list-toppage">
+		<div class="clear height-50"></div>
+		<div class="hidden-xs"><div class="height-50"></div></div>
+		<div class="height-10"></div>
+		<div class="pageinsidetopfull-pict" style="display: block;width: auto;height: auto; background: none !important;">
+			<div class="insides-text text-center" style="display: block;">
+				<h2>OUR PRODUCTS</h2> <div class="clear"></div>
+				<span>{{ data.title }}</span>
+			</div>
+		</div>
+	</div>
+	<div class="clear height-50"></div><div class="height-15"></div>
+
+	<div class="container-inside-productlist">
+
+		<div class="prelatife outers-lines-backproductlist">
+			<div class="lines-grey"></div>
+			<div class="position-text">
+				<span>
+					<a href="{{ url('product') }}">BACK TO PRODUCT LIST</a>
+				</span>
+			</div>
+		</div> 
+
+		<div class="clear height-15"></div>
+	</div>
+	<section class="middle-product-list">
+		<div class="outers-cont-product-list">
+			<div class="container-inside-productlist">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 back-greyin2">
+						<div class="pict-full prelatife margin-tpmn46">
+								<img src="{{ app.request.baseurl }}/asset/images/{{ data.big1 }}" alt="" class="img-responsive">
+							</div>
+						<div class="clear height-35"></div>
+						<div class="padding-left-15 cont-lefts">
+							<ul class="list-unstyled">
+								{% for ks, item in list_prd %}
+									<li {% if id == ks %}class="current"{% endif %}>
+										<a href="{{ url('product-list', { 'id':ks, 'name':item.title|lower|url_encode }) }}">{{ item.title|title }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+							<div class="clear height-50"></div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="col-md-9 col-sm-8 back-greyin1">
+						<div class="cont-right">
+							<div class="pict-full">
+								<img src="{{ app.request.baseurl }}/asset/images/gradasi-product-details.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="clear height-35"></div>
+							<div class="listing-td-products padding-left-40">
+								{% if data.list != '' %}
+								<ul class="list-unstyled">
+									{% for ks, item in data.list %}
+										<li><a href="javascript:;">{{ item.name|raw }}</a></li>
+									{% endfor %}
+								</ul>
+								<p>&nbsp;</p>
+								<p><b style="font-size:15px;">*Please contact us directly for products not listed.</b></p>
+								{% else %}
+								    <p><b style="font-size:15px;">*Please contact us directly for products not listed
+								    <p>&nbsp;</p>
+								    <p>&nbsp;</p>
+								    <p>&nbsp;</p>
+								    <p>&nbsp;</p>
+								    <p>&nbsp;</p>
+								    <p>&nbsp;</p>
+								    <p>&nbsp;</p>
+								    <p>&nbsp;</p>
+								{% endif %}
+							</div>
+
+							<div class="clear"></div>
+						</div>
+						<div class="clear height-50"></div><div class="height-25"></div>
+					</div>
+				</div>
+
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+
+	<div class="clear"></div>
+</div>
+{% endblock %}

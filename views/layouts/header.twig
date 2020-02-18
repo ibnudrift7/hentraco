@@ -1,0 +1,84 @@
+<header class="head">
+<!--header-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs">
+                <div class="navbar-header">
+                    <a href="{{ path('homepage', {lang: lang_active}) }}" class="navbar-brand">
+                        <img src="{{ app.request.baseurl }}/asset/images/logo.svg" class="img-responsive" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9 views_mobiles_header col-sm-12">
+                <div class="container-fluid">
+                    <div class="navbar-header hidden-md hidden-lg">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="{{ path('homepage', {lang: lang_active}) }}"><img src="{{ app.request.baseurl }}/asset/images/logo.svg" class="img-responsive" alt="logo"></a>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="navbar-nav navbar-right">
+                            <li class="{% if menu == 'homepage' %}active{% endif %}"><a href="{{ path('homepage', {lang: lang_active}) }}">Home</a></li>
+                            <li class="{% if menu == 'about' %}active{% endif %}"><a href="{{ path('about', {lang: lang_active}) }}">About</a></li>
+                            <li class="{% if menu == 'service' %}active{% endif %}"><a href="{{ path('service', {lang: lang_active}) }}">Service & Capabilities</a></li>
+                            <li class="{% if menu == 'reference' %}active{% endif %}"><a href="{{ path('reference', {lang: lang_active}) }}">Project References</a></li>
+                            <li class="{% if menu == 'contact' %}active{% endif %}"><a href="{{ path('contact', {lang: lang_active}) }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--akhir header-->
+</header>
+
+<script type="text/javascript">
+  $(function(){
+    var s_width = $(window).width();
+    if (s_width > 1024){
+      $('.header-affixs').affix({
+        offset: {
+          top: 250,
+        }
+      });
+    }
+  });
+</script>
+
+<section id="myAffix" class="header-affixs">
+	<div class="clear height-15"></div>
+	<div class="prelatife container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3">
+				<div class="clear height-5"></div>
+				<div class="lgo_web_headrs_wb">
+					<a href="{{ path('homepage', {lang: lang_active}) }}">
+						<img src="{{ app.request.baseurl }}/asset/images/logo.svg" alt="PT. Puspetindo" class="img-responsive">
+					</a>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-9">
+				<div class="text-right"> 
+					<div class="clear height-10"></div>
+					<div class="menu-taffix">
+						<ul class="list-inline d-inline">
+							<li class="{% if menu == 'homepage' %}active{% endif %}"><a href="{{ path('homepage', {lang: lang_active}) }}">Home</a></li>
+	                        <li class="{% if menu == 'about' %}active{% endif %}"><a href="{{ path('about', {lang: lang_active}) }}">About</a></li>
+	                        <li class="{% if menu == 'service' %}active{% endif %}"><a href="{{ path('service', {lang: lang_active}) }}">Service & Capabilities</a></li>
+	                        <li class="{% if menu == 'reference' %}active{% endif %}"><a href="{{ path('reference', {lang: lang_active}) }}">Project References</a></li>
+	                        <li class="{% if menu == 'contact' %}active{% endif %}"><a href="{{ path('contact', {lang: lang_active}) }}">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>

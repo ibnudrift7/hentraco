@@ -1,0 +1,41 @@
+<!-- /. Header -->
+<header class="head prelatif">
+			<div class="prelatif container">
+				<div class="prelatif container b-white">
+					<div class="clear height-20"></div>
+					<div class="height-2"></div>
+
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="clear height-5"></div>
+							<div class="height-2"></div>
+							<div class="logo-hd"><a href="{{ path('homepage') }}"><img src="{{ app.request.baseurl }}/asset/images/logo-ecoblock.png" alt="Logo Ecoblock"></a></div>
+						</div>
+						<div class="col-xs-8">
+							<div class="box-hotline-header">
+								Call Our Hotline: <span class="hline">(031) 897 7789</span>
+							</div>
+							<div class="clear height-15"></div>
+							<div style="height: 1px;"></div>
+
+							<div class="top-menu">
+								<ul>
+									<li {% if menu == 'homepage' %}class="active"{% endif %}><a href="{{ path('homepage') }}">HOME</a></li>
+									<li {% if menu == 'about' %}class="active"{% endif %}><a href="{{ path('about') }}">PROFIL</a></li>
+									<li {% if menu == 'keuntungan' %}class="active"{% endif %}><a href="{{ path('keuntungan') }}">KEUNTUNGAN</a></li>
+									<li {% if menu == 'produk' %}class="active"{% endif %}><a href="{{ path('produk') }}">PRODUK & APLIKASI</a></li>
+									<li {% if menu == 'panduan' %}class="active"{% endif %}><a href="{{ path('panduan') }}">PANDUAN ECOBLOCK</a></li>
+									<li {% if menu == 'contact' %}class="active"{% endif %}><a href="{{ path('contactus') }}">KONTAK</a></li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+
+						</div>
+					</div>
+					<div class="back-lin-green"></div>
+					<div class="clear height-0"></div>
+				</div>
+				
+				<div class="back-shadow-header"></div>
+			</div>
+</header>

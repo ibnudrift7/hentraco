@@ -1,0 +1,77 @@
+{% extends layout %}
+{% block title %}Gallery - {% endblock %}
+{% block menu %}gallery{% endblock %}
+{% block content %}
+<section class="outers_inside_page p_member2">
+	<div class="insides_page">
+		<div class="back-white backs_cloud_insidep content-text text-center prelatife">
+			<div class="prelatife container">
+				<div class="clear h60"></div>
+				<h1 class="title-pages">Cek Hasil Pemeriksaan <span class="qwig">Online</span></h1>
+				<div class="clear height-50"></div><div class="height-20"></div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="back_blue_bottomtop_member">
+				<div class="container prelatife">
+					<div class="clear height-45"></div>
+					<div class="mw1035 tengah">
+						<span class="fRoboto"><b>Selamat Datang Ibu Suciwati</b></span>
+						<p>
+							<span class="black">Data diri:</span> <br>
+							<span class="black">Email.</span> suci@gmail.com &nbsp;&nbsp;&nbsp;&nbsp; <span class="black">Telepon.</span> 081 6540 7559 <br>
+							<span class="black">Alamat.</span> Jl. Penjaringan Sari 21 / DK 21, Surabaya. Jawa Timur <br>
+							<small>Perbarui data diri</small>
+						</p>
+
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="back-white">
+			<div class="prelatife container">
+				<div class="clear height-50"></div><div class="height-40"></div>
+
+				<div class="mw800 tengah outers_cont_defaultmember">
+					<div class="blocks_data_pemeriksaan text-center">
+						<h3>Daftar Pemeriksaan</h3>
+						<div class="clear height-25"></div>
+						<table class="table table-striped custom_tables">
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>Tanggal pemeriksaan</th>
+									<th>jenis pemeriksaan</th>
+									<th>attachment</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for i in 1..5 %}
+								    <tr>
+										<td>0{{ i }}</td>
+										<td>10 Mei 2016</td>
+										<td>cek darah</td>
+										<td>
+											<a href="#" class="download_f">
+												<i class="fa fa-download"></i>&nbsp;&nbsp;DOWNLOAD
+											</a>
+										</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="clear height-50"></div><div class="height-40"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<div class="clear"></div>
+{% endblock %}

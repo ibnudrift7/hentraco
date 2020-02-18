@@ -1,0 +1,210 @@
+{% extends layout %}
+{% block title %}Book Online - {% endblock %}
+{% block menu %}book_online{% endblock %}
+{% block content %}
+	<div class="prelatife container">
+	<div class="outer-inside-pages">
+		<div class="inside content-text">
+			<div class="celar height-35"></div>
+			<h1 class="page-title">BOOK ONLINE</h1>
+			<div class="clear height-15"></div>
+			
+			<div class="back-insid-location-outer">
+				<div class="insd">
+					<div class="clear height-50"></div>
+					<div class="bcol-bookingform">
+						<p>Request a booking or make an enquiry at Cosy Lodge by filling this form, our representative will respond to you right away.</p>
+						<div class="clear height-25"></div>
+
+						<form class="form-horizontal" action=""  role="form" method="post">
+							{% if error|length > 0 %}
+						    <div class="alert alert-error bg-danger">
+						    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+							    <h6>Please fix the following input errors:</h6>
+							    <ul>
+							    	{% for dataError in error %}
+							    	<li>{{ dataError }}</li>
+							    	{% endfor %}
+							    </ul>
+						    </div>
+							{% endif %}
+							{% if msg == 'success' %}
+							    <div class="alert alert-success">
+							    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+								    Thank you for contacting us! we will respond to you shortly.
+							    </div>
+							{% endif %}
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="bx-cl3">
+											<label class="control-label">CHECK IN DATE</label>
+											<div class="clear height-10"></div>
+											<div class="prelatife w286">
+											 <input type="text" class="form-control datepicker" name="Booking[check_ind]" id="contact_check_ing" value="">
+												 	<i class="ic-map-loct"></i>
+											 </div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="bx-cl3 margin-left-15">
+											<label class="control-label">CHECK OUT DATE</label>
+											<div class="clear height-10"></div>
+											<div class="prelatife w286">
+											 <input type="text" class="form-control datepicker" name="Booking[check_out]" id="contact_check_ing2" value="">
+												 	<i class="ic-map-loct"></i>
+											 </div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="bx-cl3 fright">
+											<label class="control-label">ACCOMMODATION</label>
+											<div class="clear height-10"></div>
+											<div class="prelatife w286">
+											 	<select name="Booking[accomod]" class="form-control">
+											 		<option value="1">Cosy Lodge Belmont</option>
+											 	</select>
+											 </div>
+										</div>
+									</div>
+									<div class="col-sm-4"></div>
+								</div>
+								<div class="clear height-25"></div>
+								<div class="row">
+									<div class="col-sm-6">
+										<label class="control-label">FIRST NAME</label><div class="clear height-10"></div>
+										<div class="margin-right-35">
+											<input type="text" class="form-control" name="Booking[first_name]" id="contact_firstn" value="">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="control-label">LAST NAME</label><div class="clear height-10"></div>
+											<input type="text" class="form-control" name="Booking[last_name]" id="contact_firstn" value="">
+									</div>
+								</div>
+								<div class="clear height-10"></div>
+								<div class="row">
+									<div class="col-sm-6">
+										<label class="control-label">EMAIL</label><div class="clear height-10"></div>
+										<div class="margin-right-35">
+											<input type="email" class="form-control" name="Booking[email]" id="contact_firstn" value="">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="control-label">CONFIRM EMAIL</label><div class="clear height-10"></div>
+											<input type="email" class="form-control" name="Booking[confirm_email]" id="contact_firstn" value="">
+									</div>
+								</div>
+								<div class="clear height-10"></div>
+								<div class="row">
+									<div class="col-sm-6">
+										<label class="control-label">POST CODE</label><div class="clear height-10"></div>
+										<div class="margin-right-35">
+											<input type="text" class="form-control" name="Booking[post_code]" id="contact_firstn" value="">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="control-label">COUNTRY</label><div class="clear height-10"></div>
+											<input type="text" class="form-control" name="Booking[country]" id="contact_firstn" value="">
+									</div>
+								</div>
+								<div class="clear height-10"></div>
+								<div class="row">
+									<div class="col-sm-6">
+										<label class="control-label">POST CODE</label><div class="clear height-10"></div>
+										<div class="margin-right-35">
+											<input type="text" class="form-control" name="Booking[post_code]" id="contact_firstn" value="">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="control-label">COUNTRY</label><div class="clear height-10"></div>
+											<input type="text" class="form-control" name="Booking[country]" id="contact_firstn" value="">
+									</div>
+								</div>
+								<div class="clear height-10"></div>
+								<div class="row">
+									<div class="col-sm-6">
+										<label class="control-label">PHONE NUMBER</label><div class="clear height-10"></div>
+										<div class="margin-right-35">
+											<input type="text" class="form-control" name="Booking[phone]" id="contact_firstn" value="">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="control-label">MOBILE NUMBER</label><div class="clear height-10"></div>
+											<input type="text" class="form-control" name="Booking[mobile]" id="contact_firstn" value="">
+									</div>
+								</div>
+								<div class="clear height-15"></div>
+								<div class="row">
+									<div class="col-sm-12">
+										<label class="control-label">Message</label>
+										<div class="clear height-10"></div>
+							     		 <textarea class="form-control" name="Booking[message]" rows="4"></textarea>
+									</div>
+								</div>
+								<div class="clear height-15"></div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="fright">
+											<input type="submit" value="" class="btn bt-submit-greenl"></input>
+										</div>
+									</div>
+								</div>
+							  {# <div class="form-group">
+							    <label class="col-xs-3 control-label">Message</label>
+							    <div class="col-xs-8">
+							      <textarea class="form-control" name="contact[message]" rows="3">{{ data.message }}</textarea>
+							    </div>
+							    <div class="clear"></div>
+							  </div>
+
+							  <div class="form-group">
+							    <label class="col-xs-3 control-label">Verification Code</label>
+							    <div class="col-xs-8">
+							      <img src="asset/captcha/captcha.php" id="captcha" style="float: left;" />
+							      <a href="javascript: ;" onclick="document.getElementById('captcha').src='asset/captcha/captcha.php?'+Math.random(); document.getElementById('captcha-form').focus();" id="change-image" style="padding:4px 0px;  color:#000000; text-decoration: none; font-size: 9px; font-family:'Roboto', sans-serif; margin-top: 40px; float: left; margin-left: 10px;">Not readable? Change text.</a>
+							    </div>
+							    <div class="clear"></div>
+							  </div>
+							  <div class="form-group">
+							    <label class="col-xs-3 control-label">&nbsp;</label>
+							    <div class="col-xs-8">
+							      <input type="text" class="form-control" name="captcha" id="contact_captcha" value="">
+							    </div>
+							    <div class="clear"></div>
+							  </div>
+
+							  <div class="form-group">
+							    <label class="col-xs-3 control-label">&nbsp;</label>
+							    <div class="col-xs-8">
+							      <input type="submit" value="Kirim" class="btn"></input>
+							    </div>
+							    <div class="clear"></div>
+							  </div> #}
+
+								<div class="clear"></div>
+							</form>
+
+						<div class="clear"></div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+			
+			 <div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear height-5"></div>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	 <script type="text/javascript">
+	 	$( ".datepicker" ).datepicker({
+                    dateFormat: "yy-mm-dd",
+                    minDate: '+1d',
+                });
+	</script>
+{% endblock %}

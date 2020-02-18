@@ -1,0 +1,177 @@
+{% extends layout %}
+{% block title %}Aneka Solusi Atap - {% endblock %}
+{% block menu %}about{% endblock %}
+{% block content %}
+	<div class="back-white outer-inside-pagesl">
+		<div class="prelatife container">
+			<div class="clear height-205"></div>
+			
+			<div class="inside-pcontent-in content-text">
+				<div class="top-content">
+					<div class="row">
+						<div class="col-md-9 col-sm-8">
+							<h1 class="title-pages">Aneka Solusi Atap</h1>
+						</div>
+						<div class="col-md-3 col-sm-4">
+							<div class="out-breadcrumbs">
+								<ol class="breadcrumb">
+								  <li><a href="{{ path('homepage') }}"> <img src="{{ app.request.baseurl }}/asset/images/ls-icon-home.png" alt=""> </a></li>
+								  <li class="active">ANEKA SOLUSI ATAP</li>
+								</ol> <div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div> 
+				<div class="clear height-25"></div>
+				<div class="middle-content">
+					<div class="detail-outer-solusi-pg">
+						{% if data %}
+							<span>{{ data.name }}</span>
+						{% endif %}
+						<div class="clear height-15"></div><div class="height-1"></div>
+						
+						<div class="back-white outer-box-inside-anekasolusi-detail">
+							<div class="row">
+								<div class="col-lg-3 col-md-3">
+									<div class="left-conts">
+										<ul class="list-unstyled">
+											<li {% if data.no == 1 %}class="active"{% endif %}>
+												<a href="{{ url('solusi_atap_detail', {'name' : 'solusi-atap-rumah-hunian' } ) }}">Solusi Atap Rumah</a>
+											</li>
+											<li {% if data.no == 2 %}class="active"{% endif %}>
+												<a href="{{ url('solusi_atap_detail', {'name' : 'solusi-penerangan-atap-frp' } ) }}">Solusi Penerangan Atap FRP</a>
+											</li>
+											<li {% if data.no == 3 %}class="active"{% endif %}>
+												<a href="{{ url('solusi_atap_detail', {'name' : 'solusi-atap-industri-pabrik' } ) }}">Solusi Atap Industri &amp; Gedung</a>
+											</li>
+											{# <li {% if data.no == 3 %}class="active"{% endif %}>
+												<a href="{{ url('solusi_atap_detail', {'name' : 'solusi-atap-gedung' } ) }}">Solusi Atap Gedung Komersil</a>
+											</li> #}
+											<li {% if data.no == 4 %}class="active"{% endif %}>
+												<a href="{{ url('solusi_atap_detail', {'name' : 'solusi-insulasi-storage' } ) }}">Solusi Insulasi Cold Storage</a>
+											</li>
+										</ul>
+										<div class="clear height-25"></div><div class="height-2"></div>
+										<div class="padding-left-30">
+											<a href="{{ url('aneka_solusi_atap') }}"><img src="{{ app.request.baseurl }}/asset/images/back-to-ls-anekasolusi.png" alt=""></a>
+										</div>
+
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="col-lg-9 col-md-9">
+									<div class="right-conts">
+										<div class="insides detail-conten-asolusi">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="pict">
+														<img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/product_big/{{ data.pict }}" alt="">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="desct-detail">
+													<h2 class="title-solusi">{% if data %}{{ data.name }}{% endif %}</h2>
+													<div class="clear height-5"></div>
+													{# <p>Zelltech merupakan solusi atap praktis dan ampuh untuk insulasi panas. Gunakan Zelltech untuk kualitas, keawetan serta minimnya perawatan. </p>
+													<span>Keuntungan Insulasi pada atap rumah / hunian</span>
+													<p>- Penggunaan AC minim<br />
+														- Hawa dingin AC tidak mudah hilang<br />
+														- Meredakan kebisingan<br />
+														- Mudah dipasang sekalipun di rumah yang sudah jadi</p> #}
+														{% if data %}{{ data.desc|raw }}{% endif %}
+
+															{% if data %}
+																{% if data.no == '2' %}
+																	<a href="{{ app.request.baseurl }}/document/vsky.pdf" target="_blank" class="btn btn-default"><i class="fa fa-download"></i> &nbsp;&nbsp;Download brosur V-Sky FRP</a>
+																{% endif %}
+															{% endif %}
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+											<div class="clear height-25"></div>
+											<div class="height-2"></div>
+											<div class="box-redss-w811 text-center">
+												<div class="clear height-10"></div>
+												<span class="title">Perhatian:</span>
+												<div class="clear"></div>
+												<p>Instalasi yang tidak baik akan berdampak pada hasil akhir kemampuan insulasi dan penghematan listrik. Untuk memastikan<br>
+												 kesempurnaan pemasangan, <a href="{{ url('contact') }}">hubungi tim Solusi Panas sekarang juga</a>.</p>
+												<div class="clear"></div>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="clear"></div>
+						</div>
+
+						<div class="clear height-50"></div><div class="height-5"></div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			{# End Content text #} <div class="clear height-5"></div>
+
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="clear"></div>
+	<div class="back-bottom-banner-fcsbott prelatife">
+		<div class="prelatife container"> <div class="clear height-25"></div>
+			<div class="text-bottomfcs-bannerls text-center">
+				<div class="height-3"></div>
+				<span>Kami akan menemukan solusi atap terbaik!</span>&nbsp;&nbsp;<span class="p2_white">Dapatkan penawaran terbaik dari kami.</span>
+				<a href="javascript:;" type="button" data-toggle="modal" data-target="#myModal" class="bt-view-penawaran-home margin-left-23"></a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  			<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title"><img src="{{ app.request.baseurl }}/asset/images/lgo-solusiatap-header.png" style="width: 75px;" alt="">&nbsp;&nbsp;Request Penawaran</h4>
+		      </div>
+		      <div class="modal-body">
+		        	<div class="box-form-penawaran">
+		        		<form method="post" action="{{ path('s_penawaran') }}">
+						  <div class="form-group">
+						    <label for="exampleInputNama">Nama</label>
+						    <input name="Request[nama]" type="text" class="form-control" id="exampleInputNama" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Email address</label>
+						    <input name="Request[email]" type="email" class="form-control" id="exampleInputEmail1" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputNama">Telpon</label>
+						    <input name="Request[telpon]" type="text" class="form-control" id="exampleInputNama" required>
+						  </div>
+						   <div class="form-group">
+						    <label for="exampleInputNama">Pesan</label>
+						    <textarea name="Request[pesan]" class="form-control" rows="3"></textarea>
+						  </div>
+						  
+						  <button type="submit" class="btn btn-primary">SUBMIT</button>
+						</form>
+		        		<div class="clear"></div>
+		        	</div>
+		      </div>
+
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+{% endblock %}

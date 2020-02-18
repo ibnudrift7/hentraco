@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %} PT. Puspetindo</title>
+	<meta name="keywords" content="PT. Puspetindo">
+	<meta name="description" content="PT. Puspetindo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	 
+    <link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/comon.css" />
+
+    <link rel="Shortcut Icon" href="{{ app.request.baseurl }}/asset/images/favicon.png" />
+	<link rel="icon" type="image/ico" href="{{ app.request.baseurl }}/asset/images/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="{{ app.request.baseurl }}/asset/images/favicon.png" />
+	
+	<!-- jQuery -->
+	<script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/animate.css">
+
+	<!--  Media Css -->
+	<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/media.styles.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+											
+			$(".toScroll").on('click', function(){
+				var id = $(this).attr("data-id");
+				//alert(id);
+				$.scrollTo('#'+id , 1500);
+			});
+		});
+	</script>
+</head>
+<!-- Preloader -->
+    {# <div id="preloader">
+        <div id="statusloader">&nbsp;</div>
+    </div> #}
+    
+{% block maincontent %}{% endblock %}
+<script src="{{ app.request.baseurl }}/asset/js/wow.js"></script>
+<script type="text/javascript">
+ new WOW().init();
+</script>
+
+<div id="back-top" class="t-backtop">
+<div class="clear height-5"></div>
+    <a href="#top"><i class="fa fa-chevron-up"></i></a>
+</div>
+<script type="text/javascript">
+$(function(){
+    $('.t-backtop').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+
+    $(".jumper").on("click", function( e ) {
+        e.preventDefault();
+
+        $("body, html").animate({ 
+            scrollTop: $( $(this).attr('href') ).offset().top 
+        }, 900);
+    });
+
+    var $win = $(window);
+         $win.scroll(function () {
+             if ($win.scrollTop() == 0)
+             $('.t-backtop').hide();
+             else if ($win.height() + $win.scrollTop() != $(document).height() || $win.height() + $win.scrollTop() > 500) {
+             $('.t-backtop').show();
+             }
+         });
+
+});
+</script>
+
+<script src="{{ app.request.baseurl }}/asset/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+</html>

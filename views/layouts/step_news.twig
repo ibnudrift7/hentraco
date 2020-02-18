@@ -1,0 +1,53 @@
+<div class="clear height-4"></div>
+<div class="row-fluid height-25">
+	<div class="span2 bx-title-artikel-top">
+		<div class="box-artikel-news-top">
+			<a href="{{ path('artikel') }}">Berita & Artikel</a>
+		</div>
+	</div>
+	<div class="span9 margin-0">
+
+		<div class="box-it-artikel-news-top">
+
+			<!-- <div class="item-text">
+				<div class="content left">17/10/2013 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
+			</div> -->
+			<div class="clear height-3"></div>
+			<div id="myCarousel" class="carousel slide">
+				    <!-- Carousel items -->
+				    <div class="carousel-inner">
+					    	{% set i = 0 %}
+			  				{% for k, item in dataNews %}
+						    <div class="item {% if i == 0 %}active{% endif %}">
+						    	<div class="item-text">
+									<div class="content left">11/12/2013 - {{ item.title }}</div>
+								</div>
+						    </div>
+						    {% set i=i+1 %}
+			  				{% endfor %}
+				    </div>
+				    <!-- Carousel nav -->
+			    	<a class="carousel-control right" href="#myCarousel" data-slide="next">&nbsp;</a>
+			 </div>
+
+
+
+		</div>
+
+	</div>
+	<div class="span1 right bx-return-artikel-top">
+
+		<!-- <a href="#"><i class="icon-news-return"></i></a> -->
+
+	</div>
+</div>
+
+
+    <div id="myCarousel" class="carousel slide">
+	    <!-- Carousel items -->
+	    <div class="carousel-inner">
+		    <div class="item">…</div>
+	    </div>
+	    <!-- Carousel nav -->
+    	<a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-news-return"></i></a>
+    </div>

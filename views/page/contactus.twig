@@ -1,0 +1,141 @@
+{% extends layout %}
+{% block title %}Contact - {% endblock %}
+{% block menu %}contact{% endblock %}
+{% block content %}
+	<!--slider-->
+    <section class="slider inside-page">
+        <div class="outer-wrapper-top">
+            <div class="top-blue">
+                
+            </div>
+            
+            <div class="box-slider">
+                <div class="container prelatife-header">
+                    {% include "/layouts/header.twig" with { 'menu': block('menu') } %}
+                </div>
+                
+                <div class="image">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{ app.request.baseurl }}/asset/images/bg-profil-contact.jpg" alt="slider" class="img-responsive">
+                            <img class="shadow" src="{{ app.request.baseurl }}/asset/images/shadow.png" alt="shadow">
+                            <div class="caption">
+                                <div class="title">
+                                    <p><b>PUSPETINDO</b></p>
+                                    <p class="bot">IS AT YOUR SERVICE AND<br>READY FOR ALL YOUR INQUIRIES</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--akhir slider-->
+
+    <!--contact-->
+    <section class="form-contact middle-contacts-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="address">
+                        <div class="address1"><span>HEAD OFFICE</span><span class="numbers">1</span></div>
+                        <div class="about-address1">Manyar Resort Blok A1/07<br>Jl. Raya Sukomulyo,<br>Gresik, Jawa Timur 61101
+                        <div class="row">
+                        <div class="col-md-4"><b>T.</b> <a href="tel:+623199103048">+62 31-99103048</a></div>
+                        <div class="col-md-6"><b>E.</b> <a href="mailto:INFO@PUSPETINDO.COM">INFO@PUSPETINDO.COM</a></div>
+                        </div>
+                        </div>
+                        <div class="address1"><span>REPRESENTATIVE OFFICE</span><span class="numbers">2</span></div>
+                        <div class="about-address1">Jl. Kalibata Timur I No. 36<br>Kalibata, Jakarta 12740
+                        <div class="row">
+                        <div class="col-md-4"><b>T.</b> <a href="tel:+62217988700">+62 21 7988700 EXT 1661</a></div>
+                        <div class="col-md-6"><b>E.</b> <a href="mailto:REP@PUSPETINDO.COM">REP@PUSPETINDO.COM</a></div>
+                        </div>
+                        </div>
+                        <div class="address1"><span>WORKSHOP</span><span class="numbers">3</span></div>
+                        <div class="about-address1">Jl. Raya sembayat km 16 Manyar<br>Gresik, Jawa Timur
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-margin">
+                    <!-- Default form register -->
+                    <div class="title-form">
+                        Online Inquiry Form
+                    </div>
+                    <div class="subs_left_textn">
+                        <span>Contact Us</span>
+                    </div>
+                       <form method="post" class="form" action="">
+                        {% if error|length > 0 %}
+                        <div class="alert alert-danger bg-danger">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <h6>Please fix the following input errors:</h6>
+                                <ul>
+                                    {% for dataError in error %}
+                                    <li>{{ dataError }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        <div style="max-width:500px; margin:0 auto;">
+                            {% if msg == 'error_message' %}
+                                <div class="alert alert-danger">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    Please Check Captcha for sending contact form! 
+                                </div>
+                            {% endif %}
+                            {% if msg == 'success' %}
+                                <div class="alert alert-success">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    Thank you for contacting us! we will respond to you shortly.
+                                </div>
+                            {% endif %}
+                        </div>
+                        <!-- Default input name -->
+                        <label for="defaultFormRegisterNameEx" class="blue-text">NAME</label>
+                        <input type="text" id="defaultFormRegisterNameEx" name="Contact[name]" class="form-control">
+                        
+                        <br>
+
+                        <!-- Default input email -->
+                        <label for="defaultFormRegisterCopmanyEx" class="blue-text">COMPANY</label>
+                        <input type="text" id="defaultFormRegisterEmailEx" name="Contact[company]" class="form-control">
+                        
+                        <br>
+
+                        <!-- Default input email -->
+                        <label for="defaultFormRegisterphoneEx" class="blue-text">PHONE</label>
+                        <input type="number" id="defaultFormRegisterConfirmEx" name="Contact[phone]" class="form-control">
+
+                        <br>
+                        <!-- Default input email -->
+                        <label for="defaultFormRegisterEmailEx" class="blue-text">EMAIL</label>
+                        <input type="email" id="defaultFormRegisterEmailEx" name="Contact[email]" class="form-control">
+                        <br>
+                        
+                        <!-- Default input password -->
+                        <label for="defaultFormRegistermassageEx" class="blue-text">MESSAGE</label>
+                        <input type="text" id="defaultFormRegisterPasswordEx" name="Contact[message]" class="form-control">
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="g-recaptcha" data-sitekey="6LdcbVEUAAAAAHaXcHXpJNzulE_o9sPgIH2WUHBf"></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-right mt-4">
+                                    <button class="btn btn-primary" type="submit">SUBMIT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Default form register -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}

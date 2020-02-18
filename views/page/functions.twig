@@ -1,0 +1,167 @@
+{% extends layout %}
+{% block title %}Functions - {% endblock %}
+{% block menu %}about{% endblock %}
+{% block content %}
+
+<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/timepicker/jquery.timepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/js/timepicker/jquery.timepicker.css" />
+<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/timepicker/lib/bootstrap-datepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/js/timepicker/lib/bootstrap-datepicker.css" />
+
+<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/timepicker/lib/bootstrap-datepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/js/timepicker/lib/bootstrap-datepicker.css" />
+<script>
+$(function() {
+    $('#scrollDefaultExample').timepicker({ 'scrollDefault': 'now' });
+});
+</script>
+<style type="text/css">
+	.ui-timepicker-wrapper{
+		width: 205px;
+		text-align: center;
+	}
+</style>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+{# <script src="//code.jquery.com/jquery-1.10.2.js"></script> #}
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+{# <link rel="stylesheet" href="/resources/demos/style.css"> #}
+<script type="text/javascript">
+$(function() {
+$( ".datepicker" ).datepicker();
+});
+</script>
+
+<style type="text/css"></style>
+<div class="outers-middle-contents back-black">
+		<div class="top-insides-illpage prelatife">
+			<div class="back-img" style="background-image: url({{ app.request.baseurl }}/asset/images/ills-tops-inside-function.jpg);">
+				<div class="ins-texxt text-center">
+					<div class="clear height-220"></div>
+					<h2>FUNCTIONS AT SEVENTEEN</h2> <div class="clear height-10"></div>
+					<p>An opportunity to impress</p>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		{# end fcs blocks #}
+		<div class="clear height-50"></div><div class="height-30"></div>
+		<div class="mw-740 content-text">
+			<p>Seventeen resto and lounge wil be the perfect place to held your functions. Whether it’s a meeting, engagement, birthday party, private party, and other social event, we can accommodate up to 200 pax and we always do everything with style.</p>
+			<p>For better planning, you can download our function plans and seating layouts below.</p>
+			<div class="clear height-15"></div>
+			<div class="text-center"><a href="#"><img src="{{ app.request.baseurl }}/asset/images/back-txt-downloadpdf.png" alt=""></a></div>			
+			
+			<div class="clear height-50"></div>
+			<div class="height-20"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="lines-white-20p"></div>
+		<div class="clear height-50"></div>
+		<div class="clear height-50"></div>
+		<div class="clear height-15"></div>
+
+		<div class="mw-740 content-text text-center">
+			<p class="text-center">INQUIRE FOR YOUR FUNCTIONS NOW</p>
+			<div class="clear height-25"></div>
+			<div class="contact-form text-contact text-center">
+
+					<form class="form-horizontal" action=""  role="form" method="post">
+					{% if error|length > 0 %}
+				    <div class="alert alert-error bg-danger">
+				    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <h6>Please fix the following input errors:</h6>
+					    <ul>
+					    	{% for dataError in error %}
+					    	<li>{{ dataError }}</li>
+					    	{% endfor %}
+					    </ul>
+				    </div>
+				{% endif %}
+				{% if msg == 'success' %}
+				    <div class="alert alert-success">
+				    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+					    Thank you for contacting us! we will respond to you shortly.
+				    </div>
+				{% endif %}
+
+					  <div class="form-group">
+					    <label class="control-label">Function date</label>
+					      <input type="text" class="form-control datepicker" name="contact[function_date]" id="contact_function_date" value="{{ data.function_date }}">
+					    <div class="clear"></div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label">Function time</label>
+					      <input type="text" class="form-control" name="contact[function_time]" id="scrollDefaultExample" value="{{ data.function_time }}">
+					    <div class="clear"></div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label">Number of guests</label>
+					      <input type="text" class="form-control" name="contact[number_of_guests]" id="contact_number_of_guests" value="{{ data.number_of_guests }}">
+					    <div class="clear"></div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label">Type of event</label>
+					      <input type="text" class="form-control" name="contact[type_of_event]" id="contact_type_of_event" value="{{ data.type_of_event }}">
+					    <div class="clear"></div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label">Customer full name</label>
+					      <input type="text" class="form-control" name="contact[customer_full_name]" id="contact_nacustomer_full_name" value="{{ data.customer_full_name }}">
+					    <div class="clear"></div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label">Email</label>
+					      <input type="text" class="form-control" name="contact[email]" id="conemail" value="{{ data.email }}">
+					    <div class="clear"></div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label">Mobile phone</label>
+					      <input type="text" class="form-control" name="contact[mobile_phone]" id="contmobile_phone" value="{{ data.mobile_phone }}">
+					    <div class="clear"></div>
+					  </div>
+
+					  <div class="clear"></div>
+					  <div class="form-group">
+					  	<div class="row">
+						  	<div class="col-xs-12 col-md-12">
+							    <label for="exampleInputEmail1" class="control-label">Other notes</label> 
+							    <div class="clear height-0"></div>
+							    <textarea class="form-control" name="contact[message]" rows="3">{{ data.message }}</textarea>
+						    </div>
+					    </div>
+					  </div>
+					  <div class="clear height-5"></div><div class="height-2"></div>
+					  <div class="form-group">
+					  	<div class="row">
+					  	<div class="col-xs-12 col-md-12">
+					  		<div class="g-recaptcha" data-sitekey="6Lfhyf8SAAAAAEIoCVTdALU8u4mOtj0o8cGiTedX"></div>
+					  	</div>
+					  	</div>
+					  </div>
+					  <div class="height-5"></div>
+					  <div class="form-group">
+					  	<div class="row">
+						    <div class="col-xs-12 col-md-12">
+						    	<div class="padding-left-0">
+						      	<button type="submit" value="" class="btn btn-submit-custom"></button>
+						      	</div>
+						  	</div>
+					    </div>
+					    <div class="clear"></div>
+					  </div>
+
+				</form>
+
+			<div class="clear"></div>
+			</div>
+
+
+			<div class="clear"></div>
+		</div>
+		
+		
+		{% include "/layouts/_bottom_gallery_dt.twig" %}
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}

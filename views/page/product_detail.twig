@@ -1,0 +1,255 @@
+{% extends layout %}
+{% block title %}{{ lang_message.t_nproducts_cat|raw }} - {% endblock %}
+{% block menu %}products{% endblock %}
+{% block content %}
+<div class="outers_cont_inside_page back-white">
+
+	<h1 style="visibilty: none; display:none;">{{ lang_message.t_nproducts_cat|raw }} - {{ app_name }}</h1>
+	<div class="insides_toppage_blocks">
+		<div class="blocks_bottom_intop_page pg_products">
+			<div class="insides">
+				<div class="blocks_top_ill">
+					<h2 class="title_page">{{ lang_message.t_nproducts_cat|raw }}</h2>
+				</div>
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	
+	<section class="default_sc mh200">
+		<div class="prelatife container">
+			<div class="insides content-text text-center">
+				<span>{{ lang_message.t_detail_intones_1|raw }} - {{ categoryData.title|upper }}</span>
+				<h2>{{ lang_message.t_detail_instones_2|raw }}</h2>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="default_sc back-grey" id="block_product_home">
+		<div class="prelatife container">
+			<div class="insides text-left">
+				{# Start detail prod #}
+				<div class="mw1146 tengah">
+					<div class="row conts_detail_product row-eq-height">
+						<div class="col-md-7">
+							<div class="blocks_p white prelatife picture_bgF_product">
+								{% if ids == 14 or ids == 15 %}
+									<div class="l_ac pict1 ex_zoom">
+										<img src="{{ app.request.baseurl }}/images/product/{{ data.pict.dry }}" data-zoom-image="{{ app.request.baseurl }}/images/product/{{ data.pict.dry }}" alt="{{ data.name }}" class="img-responsive center-block">
+									</div>
+									{% if data.pict.wet != '' %}
+										<div class="l_ac pict2 hide ex_zoom">
+											<img src="{{ app.request.baseurl }}/images/product/{{ data.pict.wet }}" data-zoom-image="{{ app.request.baseurl }}/images/product/{{ data.pict.wet }}" alt="{{ data.name }}" class="img-responsive center-block">
+										</div>
+									{% endif %}
+									{% if categoryId == 1 %}
+										<div class="l_ac pict3 hide ex_zoom">
+											<img src="{{ app.request.baseurl }}/images/product/{{ data.pict.pack }}" data-zoom-image="{{ app.request.baseurl }}/images/product/{{ data.pict.pack }}" alt="{{ data.name }}" class="img-responsive center-block">
+										</div>
+									{% endif %}
+								{% else %}
+									<div class="l_ac pict1 ex_zoom">
+										<img src="{{ app.request.baseurl }}/images/product/big/{{ data.pict.dry }}" data-zoom-image="{{ app.request.baseurl }}/images/product/big/{{ data.pict.dry }}" alt="{{ data.name }}" class="img-responsive center-block">
+									</div>
+									{% if data.pict.wet != '' %}
+										<div class="l_ac pict2 hide ex_zoom">
+											<img src="{{ app.request.baseurl }}/images/product/big/{{ data.pict.wet }}" data-zoom-image="{{ app.request.baseurl }}/images/product/big/{{ data.pict.wet }}" alt="{{ data.name }}" class="img-responsive center-block">
+										</div>
+									{% endif %}
+									{% if categoryId == 1 %}
+										<div class="l_ac pict3 hide ex_zoom">
+											<img src="{{ app.request.baseurl }}/images/product/big/{{ data.pict.pack }}" data-zoom-image="{{ app.request.baseurl }}/images/product/{{ data.pict.pack }}" alt="{{ data.name }}" class="img-responsive center-block">
+										</div>
+									{% endif %}
+								{% endif %}
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="blocks_p grey margin-left-10">
+								<div class="insides prelatife">
+									<div class="tops_title">{{ data.name|upper }}</div>
+									<div class="clear height-10"></div>
+									<table class="table">
+										<tbody>
+											{# <tr>
+												<td><b>Origin</b></td>
+												<td>{{ data.origin|title }}</td>
+											</tr> #}
+											<tr>
+												<td><b>Available Sizes</b></td>
+												<td>{{ data.desc|raw }}</td>
+											</tr>
+											<tr>
+												<td><b>Packing</b></td>
+												<td>PP / PE Bag @20kg / pallet, loose jumbo bags</td>
+											</tr>
+											<tr>
+												<td><b>Quality</b></td>
+												<td>Standard quality / PP / PE Bag / Standard Pallet</td>
+											</tr>
+											<tr>
+												<td><b>Document</b></td>
+												<td>Invoice, Packing List, BL</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="clear height-20"></div>
+									<div class="">
+										<a href="javascript:;" class="btn btn-default btns_defgreens_tln" role="button" data-toggle="modal" data-target="#myModal">INQUIRE THIS PRODUCT</a>
+										<div class="clear"></div>
+									</div> <div class="clear"></div>
+
+									<div class="blck_bottoms">
+										<div class="row">
+											<div class="col-xs-5 col-sm-6 col-md-6">
+												<div class="clear height-5"></div>
+												<a href="{{ path('products', {id: categoryId, lang: lang_active}) }}" class="bck_tproducts">BACK TO PRODUCT</a>
+											</div>
+											<div class="col-xs-7 col-sm-6 col-md-6 text-right d_inlinMiddle">
+												{% if link_prev %}
+												<a href="{{ path('product_detail', {'id': link_prev, category:categoryId, lang: lang_active}) }}">
+												{% else %}
+												<a href="javascript:;">
+												{% endif %}
+												<img src="{{ app.request.baseurl }}/asset/images/icn-small-prev.png" alt="">&nbsp; PREV</a>
+												&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+												{% if link_next %}
+												<a href="{{ path('product_detail', {'id': link_next, category:categoryId, lang: lang_active}) }}">
+												{% else %}
+												<a href="javascript:;">
+												{% endif %}
+												NEXT &nbsp;<img src="{{ app.request.baseurl }}/asset/images/icn-small-next.png" alt=""></a>
+											</div>
+										</div>
+									</div>
+
+									<div class="celar"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bl_text_bottom_fcnt text-center padding-top-15">
+						<div class="clear height-3"></div>
+						<div class="row">
+							<div class="col-md-7 text blocks_pag_SlideProduct">
+								IMAGE: &nbsp;
+								<a class="active" href="javascript:;" data-id="1">DRY</a>
+								{% if data.pict.wet != '' %}
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#" href="javascript:;" data-id="2">WET</a>
+								{% endif %}
+								{% if categoryId == 1 %}
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a  href="javascript:;" data-id="3">PACK</a>
+								{% endif %}
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+
+					<div class="clear"></div>
+				</div>
+				{# End detail prod #}
+				<div class="clear height-25"></div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+	{# end product home #}
+</div>
+
+<!-- Modal -->
+<div class="modal fade customs_modalPopup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      {# <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div> #}
+      <div class="modal-body">
+        <div class="ins_modal">
+        	<div class="row">
+        		<div class="col-md-6 col-sm-6">
+        			<div class="picts">
+        				<img src="{{ app.request.baseurl }}/image.php/{{ data.pict.dry }}?width=301&amp;height=214&amp;cropratio=301:214&amp;image=/images/product/{{ data.pict.dry }}" alt="" class="img-responsive">
+        			</div>
+        			<div class="clear"></div>
+        		</div>
+        		<div class="col-md-6 col-sm-6">
+        			<div class="tops_title">{{ data.name|upper }}</div>
+        			<span>INQUIRE THIS PRODUCT</span>
+        			<div class="clear"></div>
+        			<form class="form-horizontal" action="" method="POST">
+					  <div class="form-group">
+					    <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control" id="inputEmail3" name="Inquire[name]" >
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputEmail4" class="col-sm-3 control-label">Phone</label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control" id="inputEmail4" name="Inquire[phone]" >
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputEmail5" class="col-sm-3 control-label">Email</label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control" id="inputEmail5" name="Inquire[email]" >
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputEmail6" class="col-sm-3 control-label">Message</label>
+					    <div class="col-sm-9">
+					      <textarea name="Inquire[message]" id="" rows="5" class="form-control"></textarea>
+					    </div>
+					  </div>
+					  <input type="hidden" name="Inquire[product]" value="{{ data.name }}">
+					  <div class="form-group">
+					    <div class="col-sm-offset-3 col-sm-9">
+					      <div style="float:right;" class="g-recaptcha" data-sitekey="6LeV3SMUAAAAAPC5O5BRf_D6hsL0ec8ZDeLFw4wT"></div>
+					      <script src='https://www.google.com/recaptcha/api.js'></script>
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					    <div class="col-sm-offset-3 col-sm-9">
+					      <button type="submit" class="btn btn-default">INQUIRE THIS PRODUCT</button>
+					    </div>
+					  </div>
+					</form>
+        			<div class="clear"></div>
+        		</div>
+        	</div>
+        	<div class="clear"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src='{{ app.request.baseurl }}/asset/js/jquery.zoom.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var productImgs = $('.picture_bgF_product');
+		$('.blocks_pag_SlideProduct a').live('click', function(){
+			$('.picture_bgF_product .l_ac').addClass('hide');
+			var set_akfSlide = $(this).attr('data-id');
+			$(productImgs).find('.l_ac.pict'+set_akfSlide).removeClass('hide');
+
+			$('.blocks_pag_SlideProduct a').removeClass('active');
+			$(this).addClass('active');
+			return false;
+		});
+
+		// zoom product image
+		$('.picture_bgF_product .l_ac').zoom();
+	})
+</script>
+{% endblock %}

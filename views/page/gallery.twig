@@ -1,0 +1,76 @@
+{% extends layout %}
+{% block title %}{{ lang_message.t_gallery_inspiration|raw }} - {% endblock %}
+{% block menu %}gallery{% endblock %}
+{% block content %}
+<div class="outers_cont_inside_page back-white">
+
+	<h1 style="visibilty: none; display:none;">{{ lang_message.t_gallery_inspiration|raw }} - {{ app_name }}</h1>
+	<div class="insides_toppage_blocks">
+		<div class="blocks_bottom_intop_page pg_about">
+			<div class="insides">
+				<div class="blocks_top_ill">
+					<h2 class="title_page">{{ lang_message.t_gallery_inspiration|raw }}</h2>
+				</div>
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	
+	<section class="default_sc back-grey" id="block_product_home">
+		<div class="prelatife container">
+			<div class="insides text-centers">
+
+				<h4 class="sub_title">{{ lang_message.t_gallerys_top_title1|raw }}</h4>
+				<div class="clear"></div>
+				<div class="clear height-50"></div>
+
+				<div class="lists_gallery_defaults">
+					<div class="row">
+					
+					{% for keys, item in list_data_gallery %}
+						<div class="col-md-3 col-sm-6">
+						    <div class="items">
+								<div class="pict prelatife">
+									<ul id="light-gallery" class="gallery">
+										<li data-src="{{ app.request.baseurl }}/images/gallery/{{ item.folder }}/{{ item.list_gallery[0] }}" data-sub-html="<h5>{{ item.name|raw }}</h5>">
+								        	<a href="{{ app.request.baseurl }}/images/gallery/{{ item.folder }}/{{ item.list_gallery[0] }}">
+								            	<img src="{{ app.request.baseurl }}/images/gallery/{{ item.folder }}/{{ item.cover }}" alt="{{ item.name|raw }}" class="img-responsive center-block">
+								            </a>
+								        </li>
+								        {% for key2, item2 in item.list_gallery %}
+								        	{% if key2 != 0 %}
+								            <li data-src="{{ app.request.baseurl }}/images/gallery/{{ item.folder }}/{{ item2 }}" data-sub-html="<h5>{{ item.name|raw }}</h5>"></li>
+								            {% endif %}
+								        {% endfor %}
+								    </ul>
+								</div>
+								<div class="names text-center">
+									{{ item.name|raw }}
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					{% endfor %}
+
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+	{# end product home #}
+</div>
+
+{# <link rel="stylesheet"  href="{{ app.request.baseurl }}/asset/js/light-gallery/css/lightGallery.css"/>
+<script src="{{ app.request.baseurl }}/asset/js/light-gallery/js/lightGallery.js"></script> #}
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.8/css/lightgallery.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.8/js/lightgallery.min.js"></script>
+<script>
+	 $(document).ready(function() {
+		$("#light-gallery, .light-gallery").lightGallery();
+	});
+</script>
+{% endblock %}

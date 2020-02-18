@@ -1,0 +1,15 @@
+{% extends 'layouts/main.twig' %}
+{% block maincontent %}
+<body data-spy="scroll" id="page-top">
+		<div class="wrapper">
+			
+			{% block content %}{% endblock %}
+
+			{% include "/layouts/footer.twig" %}
+
+
+			<div class="clear"></div>
+		</div>
+</body>
+
+{% endblock %}

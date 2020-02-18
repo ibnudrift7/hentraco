@@ -1,0 +1,660 @@
+.form-contact{
+	height: auto; min-height: 846px;
+}
+
+/*----------------- Responsive ---------------------*/
+@media (min-width: 1650px){
+
+}
+
+@media screen and (max-width: 1280px) , screen and (max-width: 1430px) {
+	
+
+	.outer-wrapper-top .box-slider .carousel .carousel-caption .subtitle{
+		font-size: 30px;
+	}
+	.expertise .link{
+		margin-top: 7.5em;
+	}
+	.expertise {
+		overflow: hidden;
+	}
+	.workshop{
+		height: auto;
+		padding-bottom: 5em;
+	}
+	.expertise .kotak.customs .isi ul li{ font-size: 13px; }
+	.expertise .title-content{
+		font-size: 1.7em;
+		margin-bottom: 0.5em;
+	}
+	.expertise .title-expertise{
+		font-size: 4.6em;
+	}
+	.expertise .content{
+		padding: 0 15px;
+	}
+	.expertise .content .customs .desc{
+		position: relative;
+	}
+	.expertise .content .customs .link{
+		/*position: absolute; */
+		bottom: 0px; left: 0px;
+	}
+	.expertise .customs .isi{
+		padding: 1.8em;
+	}
+	.expertise .customs .isi ul li{
+		font-size: 12px;
+	}
+	.next .right-carousel-control{
+		right: -15px;
+	}
+
+}
+
+@media (max-width: 1280px){
+
+	.container{
+		width: 100%;
+		border: none;
+		padding: 0 15px;
+		max-width: inherit;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+
+}
+
+@media (max-width: 1200px){
+	
+	.wrapper{ margin: 0px; }
+	
+	.top-menu ul li{ 
+		padding: 0 6px;
+	}
+
+}
+
+/* Large desktop */
+@media (max-width : 1135px){
+
+	header.head nav.navbar ul.navbar-nav li a{
+		font-size: 13px;
+	}
+	header.head nav.navbar ul.navbar-nav li{
+		padding: 0 15px;
+	}
+	.outer-wrapper-top .box-slider .carousel .carousel-caption .subtitle br{
+		display: none;
+	}
+	.next.bottoms_feature_slider p{
+		max-width: 75%;
+		margin: 0 auto;
+	}
+	.next.bottoms_feature_slider p br{
+		display: none;
+	}
+	.activity.homes-activity .caption p{
+		font-size: 11px;
+	}
+	.navbar-header .navbar{
+		max-width: 185px;
+	}
+	.navbar-brand>img{
+		/* max-width: 100%; */
+	}
+	.navbar>.container .navbar-brand, 
+	.navbar>.container-fluid .navbar-brand{
+
+	}
+	header.head{
+		padding: 0 15px;
+	}
+
+	.work img.about1{
+		margin-left: 0;
+	}
+	.about h2.bot{
+		right: 0;
+	}
+	.work p{
+		max-width: 44%;
+	}
+	.work p br{
+		display: none;
+	}
+	.vision .title h2{
+		font-size: 2.7em;
+	}
+	.portfolio .tz-gallery .caption p{
+		font-size: 14px;
+	}
+	.portfolio .tz-gallery .caption h3{
+		font-size: 2em;
+	}
+	.expertise .white{
+		height: auto;
+	}
+
+	.expertise .kotak.customs .isi{
+		padding: 2.2em;
+	}
+	.expertise .link{
+		margin-top: 0.2em;
+		margin-left: 20px;
+	}
+	.expertise .customs .isi ul li{
+		padding: 4px 0;
+	}
+	.g-recaptcha{
+		margin-left: -110px;
+	}
+	.slider.inside-page .outer-wrapper-top .carousel-inner .caption .title p{
+		font-size: 42px;
+	}
+	.slider.inside-page .outer-wrapper-top .carousel-inner .caption .title p.bot{
+		font-size: 31px;
+	}
+	.capabilities .title-content{
+		font-size: 13px;
+	}
+
+}
+
+@media (max-width : 1024px){
+	.header-affixs{
+		display: none;
+	}
+}
+/*(max-width : 1024px) and*/
+@media (max-width: 1200px){
+
+}
+
+@media (min-width : 1003px) {
+	.headers-responss{ display: none; }	
+	.hidden-headersetku{ display: block; }
+}
+
+@media (max-width : 1002px) {
+	
+	.headers-responss{ 
+		display: none;
+		height: auto;
+	}	
+	.container{
+		width: 100%;
+		border: none;
+		padding: 0 15px;
+	}
+	header.inside.head,
+	header.head{
+		overflow: hidden;
+		height: auto;
+		background-color: #fff;
+	}
+	header.inside.head{
+		padding-bottom: 5px;
+	}
+
+	.header-affixs{
+		display: none;
+	}
+
+	.slider .top-blue{
+		height: 0px;
+		border: 0px;
+	}
+
+	.container.prelatife-header{
+		position: relative;
+		top: inherit;
+		padding: 0 !important;
+	}
+	.next.bottoms_feature_slider p{
+		max-width: 55%;
+	}
+	header.inside.head, header.head{
+		padding: 0 !important;
+	}
+	.navbar img{
+		margin-top: 0 !important;
+	}
+	.navbar-brand{
+		height: auto;
+		padding-top: 10px;
+	}
+	.navbar ul li.active, .navbar ul li:focus, .navbar ul li:hover{
+		background: none;
+		background-image: none;
+	}
+	header.head nav.navbar ul.navbar-nav li{
+		min-height: inherit; height: auto;
+		padding: 9px 0;
+	}
+	header.head .container-fluid{
+		padding: 0 !important;
+	}
+
+	.outer-wrapper-top .box-slider .carousel .carousel-caption{
+		position: relative;
+		right: inherit; bottom: inherit;
+		left: inherit; right: inherit;
+		text-shadow: none;
+
+		padding: 2.5em 15px;
+		background-color: grey;
+	}
+	.outer-wrapper-top .box-slider .carousel .carousel-caption .subtitle {
+	    font-size: 1.7em;
+	}
+	.activity.homes-activity .caption h3{
+		font-size: 1.6em;
+	}
+	.activity.homes-activity .tz-gallery .thumbnail{
+		min-height: 530px;
+	}
+	.client .subtitle{
+		padding-top: 4.5em;
+	}
+	.client .title p{
+		font-size: 0.9em;
+	}
+
+	.footer-blue, .footer-orange,
+	.footer-brown{
+		min-height: 79px;
+	}
+
+	.footer-orange,
+	.footer-orange a,
+	.footer-brown a,
+	.footer-brown{
+		font-size: 0.9em;
+	}
+	.footer-brown img.icon{
+		font-size: 16px;
+	}
+
+	.work img.about1{
+		display: block; text-align: center; margin: 0 auto;
+		top: inherit; margin-top: -100px;
+	}
+	.work h2.bot{
+		text-align: center;
+	}
+	.work p{
+		position: relative;
+		top: inherit; right: inherit;
+		max-width: inherit;
+		padding-bottom: 2em;
+		text-align: center;
+	}
+	.work img.about2{
+		position: relative;
+		right: inherit;
+		bottom: inherit;
+	}
+	.vision{
+		margin-top: 3em;
+	}
+	.vision .title h2{
+		padding-top: 1em;
+	}
+	.portfolio .caption{
+		left: 0px;
+		padding: 0 15px;
+	}
+	.portfolio .thumbnail{
+		position: relative;
+		max-width: 226px;
+	}
+	.portfolio .tz-gallery .caption p{
+		margin-bottom: 0; line-height: 1.3;
+	}
+	.portfolio .tz-gallery .caption{
+		bottom: inherit;
+		padding: 0;
+		left: inherit;
+		position: relative;
+	}
+	.portfolio .tz-gallery .caption p br{
+		display: none;
+	}
+
+	.portfolio h2{
+		padding-top: 1.2em;
+	}
+	.portfolio p.bot{
+		font-size: 16px;
+	}
+	.portfolio p.bot br{
+		display: none;
+	}
+	.portfolio .tz-gallery .caption h3{
+		font-size: 1.7em;
+	}
+	.portfolio .tz-gallery .caption p{
+		font-size: 13px; line-height: 1.4;
+	}
+	.portfolio .tz-gallery .lightbox{
+		max-height: 160px; overflow: hidden;
+		display: block;
+	}
+
+	.expertise .customs .brown img{
+		width: 100%;
+	}
+	.capabilities{
+		height: auto; padding-bottom: 3em;
+	}
+	.outer-middle-content.references_page .tops-filter ul li{
+		padding-top: 3px; padding-bottom: 3px;
+	}
+	.middle-contacts-page.form-contact{
+		height: auto;
+		padding-bottom: 3em;
+	}
+
+}
+
+@media (max-width: 992px) {
+
+	header.head .navbar-default{
+		margin-bottom: 0;
+		border-radius: 0px;
+		padding: 0 0px;
+	}
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+    header.head .navbar-default{
+    	background-color: transparent;
+    	border-color: transparent;
+    }
+    .navbar-default .navbar-brand{
+    	max-width: 260px;
+    	/* // padding-top: 10px;
+    	// padding-bottom: 10px;
+    	// padding-left: 15px; */
+    	/* padding: 0;  */
+    	padding-bottom: 10px;
+    }
+    .navbar-default .navbar-toggle{
+    	border-color: transparent;
+    	margin-right: 0;
+    	border-radius: 0px;
+    	/* margin-top: 5px; */
+    	margin-top: 19px;
+    }
+    .navbar-default .navbar-toggle:hover, 
+    .navbar-default .navbar-toggle:focus {
+	    background-color: rgba(204, 204, 204, 0);
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+	    background-color: #000;
+	}
+	.navbar-nav.navbar-right:last-child{
+		margin-right: 0;
+	}
+	header.head .navbar-nav{}
+	header.head .navbar-nav li{
+		border-bottom: 1px solid #ccc;
+	}
+	header.head .navbar-nav li a{
+		color: #000;
+		font-size: 14px;
+		font-weight: 500;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	.navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > .active > a:hover, 
+	.navbar-default .navbar-nav > .active > a:focus {
+	    color: #000;
+	    background-color: transparent;
+	}
+	header.head .navbar-nav li:hover > .dropdown-menu{
+		display: block;
+	}
+	.navbar-nav > li > .dropdown-menu{
+		display: none;
+		position: relative;
+		top: inherit;
+		left: inherit;
+		right: inherit;
+		float: none;
+		box-shadow: none;
+		border: 0px;
+		min-width: inherit;
+		border-radius: 0px;
+	}
+	.navbar-nav > li > .dropdown-menu > li{
+		border-top: 1px solid #ccc;
+		border-bottom: 0;
+		padding: 4px 0;
+	}
+	.navbar-nav > li > .dropdown-menu > li > a{
+		color: #919191;
+		font-size: 13px;
+		font-weight: 500;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	header.head .navbar-collapse{
+		max-height: inherit;
+		padding: 0;
+	}
+
+}
+
+@media (max-width: 980px){
+	
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+		
+}
+@media (max-width: 768px){
+	
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	
+	.slider-container.preserve-3d{
+		display: none;
+	}
+	.headers-responss{
+		display: block;
+	}
+	.header.posfull-abs,
+	header.homep.head,
+	header.head{
+		position: relative;
+	}
+	
+	footer [class*="col-md"]{
+		/*margin: 15px auto;*/
+	}
+	header.head .navbar-collapse{
+		padding: 0 15px;
+	}
+	.navbar-default .navbar-brand img{
+		margin-left: -5px;
+	}
+	.outers-block-top-wrapfcs{
+		position: relative;
+		left: inherit; top: inherit; right: inherit; bottom: inherit;
+		height: auto;
+		background-color: #fff;
+	}
+
+	.outers-block-top-wrapfcs2{
+		position: relative;
+		top: inherit; bottom: inherit;
+		padding: 2em 0 2.6em;
+		background-color: rgba(255,255,255, 0.8)
+	}
+	.outers-block-top-wrapfcs2 .bloc_middlecn_home1{
+		padding-bottom: 50px;
+	}
+	.outers-block-top-wrapfcs2 .backs_blocks_btmBanner_fcs{
+		margin-top: 0px; height: auto;
+	}
+
+	.outer-wrapper-top .box-slider .carousel .carousel-caption .subtitle{
+		font-size: 1.4em;
+	}
+	.slider .tombol a{
+		display: block; text-align: center;
+	}
+	.slider .tombol a img{
+		max-width: 100%;
+		float: none !important;
+		margin-bottom: 7px;
+	}
+	.next.bottoms_feature_slider p{
+		max-width: inherit;
+		padding: 1.9em 0;
+	}
+	.next .right-carousel-control{
+		display: none;
+	}
+	.activity.homes-activity .caption p{
+		font-size: 13px;
+	}
+	.activity.homes-activity .caption h3{
+		height: auto; overflow: inherit; padding-bottom: 10px;
+	}
+
+	.lists_client_icon .items img{
+		display: block; text-align: center;
+		margin: 0 auto;
+	}
+	.footer-1{
+		height: auto;
+	}
+	.activity.homes-activity .tops_content .subtitle p{
+		font-size: 14px;
+	}
+
+	.portfolio .tz-gallery .lightbox{
+		/* max-height: 170px; */
+		max-height: 240px;
+	}
+	.portfolio .tz-gallery .lightbox img{
+		width: 100%;
+	}
+	.portfolio .thumbnail{
+		max-width: inherit;
+	}
+	.portfolio .tz-gallery .caption{
+		padding-bottom: 2.5em;	
+	}
+	.footer-blue, .footer-orange, .footer-brown {
+	    min-height: 81px;
+	}
+
+	.vision img,
+	.work img.about2,
+	.work img.about1{
+		max-width: 100%;
+	}
+	.vision img{
+		top: inherit; right: inherit;
+	}
+
+	.slider.inside-page .outer-wrapper-top .carousel-inner .caption{
+		position: relative;
+		bottom: inherit; right: inherit;
+		top: inherit; left: inherit;
+		
+		background-color: #073553;
+		padding: 2em;
+	}
+	.slider.inside-page .outer-wrapper-top .carousel-inner .caption .title{
+		max-width: inherit;
+	}
+	.slider.inside-page .outer-wrapper-top .carousel-inner .caption .title p.bot,
+	.slider.inside-page .outer-wrapper-top .carousel-inner .caption .title p{
+		font-size: 0.7em;
+	}
+	.content-capabilities{
+		padding-bottom: 2.5em;
+	}
+	.expertise{
+		background-repeat: no-repeat;
+	}
+	.outer-middle-content.references_page .tops-filter{
+		padding-top: 1em;
+	}
+	.outer-middle-content.references_page .tops-filter ul li{
+		display: block;
+	}
+	.form-contact .subs_left_textn{
+		display: none;
+	}
+	.form-contact form{
+		margin-left: 0;
+	}
+	.g-recaptcha{
+		margin-left: 0;
+		margin-bottom: 15px;
+	}
+	.form-contact .text-right{
+		float: none; text-align: left;
+	}
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 600px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 360px) {
+
+}
+
+@media (max-width: 358px) {
+
+}

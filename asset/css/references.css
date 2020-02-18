@@ -1,0 +1,104 @@
+/*navbar*/
+.slider .top-blue{
+    position: relative;
+    z-index: 1;
+    height: 0px;
+    border: 33px #00304f solid;
+}
+.slider .carousel-inner{
+    position: relative;
+    z-index: 2;
+}
+.slider h6{
+	font-size: 9pt;
+	z-index: 3;
+	position: absolute;
+	top: 228px;
+	font-weight: bold;
+	left: 612px;
+	text-align: center;
+}
+.slider h2{
+	font-size: 45px;
+	z-index: 4;
+	position: absolute;
+	top: 248px;
+	left: 482px;
+	color: #00304f;
+	text-align: center;
+}
+.slider p{
+	font-size: 15px;
+	z-index: 5;
+	position: absolute;
+	color: #00304f;
+	top: 344px;
+	left: 288px;
+	font-weight: bold;
+	text-align: center;
+}
+.slider .title{
+	color:  #00304f;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-align: center;
+	z-index: 6;
+	top: 575px;
+	left: 484px;
+	position: absolute;
+}
+/*akhir navbar*/
+
+/*menu*/
+.menu a{
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+}
+.menu{
+	margin-left: 0px;
+	padding-top: 40px;
+}
+.menu a:hover{
+	background: #00304f;
+	color: white;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+/*portfolio*/
+.poto .title{
+	font-size: 17px;
+}
+.poto .caption {
+	font-size: 12px;
+}
+.poto img{
+	padding-top: 50px;
+}
+.poto{
+	pa
+}
+/*akhir*/
+
+/*page*/
+.page a{
+	color: black;
+	font-size: 12px;
+	padding: 10px;
+	left: 100px;
+	
+}
+.page a:hover{
+	background:  #00304f;
+	color: white;
+	text-decoration: none;
+	border-radius: 10px;
+}
+.page{
+	padding-top: 84px;
+	padding-right: 35px;
+	padding-bottom: 123px;
+}
+

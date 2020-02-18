@@ -1,0 +1,218 @@
+{% extends layout %}
+{% block title %}{% endblock %}
+{% block menu %}homepage{% endblock %}
+{% block content %}
+	<!--next-->
+<section class="next bottoms_feature_slider">
+    <div class="container prelatife">
+        <p class="text-center">We manufacture process equipments to conform to the National and International codes and standards, to exceed regular <br> standards and customer's satisfaction.
+        </p>
+        <div class="blocksn-rights-navs">
+            <div class="texts-indicat">
+                <b>1</b> / <span>5</span>
+            </div>
+            <a class="right-carousel-control" href="#myCarousel" data-slide="next">
+                <img src="{{ app.request.baseurl }}/asset/images/next.png" alt="next">
+            </a>
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>
+<!--akhir next-->
+<script type="text/javascript">
+    $(function(){
+        $('#myCarousel.home_slides').carousel();
+
+        var totalItems = $('.item').length;
+        $('.blocksn-rights-navs span').text(totalItems);
+
+        $('#myCarousel.home_slides').on('slid.bs.carousel', function() {
+            currentIndex = $(this).find('div.active').index() + 1;
+            console.log(currentIndex);
+           $('.blocksn-rights-navs b').text(currentIndex);
+        });
+    });
+    
+</script>
+
+<!--activity-->
+<section class="activity text-center homes-activity">
+    <div class="container container-content tops_content">
+        <p class="top">PT. PUSPETINDO SERVICE CAPABILITIES</p>
+        <div class="title"><p>What We Do</p></div>
+        <div class="subtitle"><p>We manufacture complex and state of the art plants equipments in a wide selection - ASME Certified. We engineered and manufactured Pressure Vessels, Towers, Heat Exchangers, Boilers, Condensers and other Plants Equipment for various Process Industries as per international codes, standard and customer specifications, in Carbon, Alloy, Stainless Steel, Clad Steels and other special materials.</p></div>
+    </div>
+    
+    <div class="container container-gallery">
+        <div class="tz-gallery">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a class="lightbox" href="{{ app.request.baseurl }}/asset/images/tabung.jpg">
+                        <img src="{{ app.request.baseurl }}/asset/images/tabung.jpg" alt="tabung" class="thumb_pict">
+                        </a>
+                        <div class="caption text-left">
+                            <h3>Heat Transfer Equipments</h3>
+                            <p class="atas">Shell & Tube type Heat Exchangers (fixed head, floating head, U-tube type)</p>
+                            <hr>
+                            <p>Condensers, Evaporator</p>
+                            <hr>
+                            <p>Waste heat boilers</p>
+                            <hr>
+                            <p>Steam drims, Economisers, Super heaters</p>
+                            <hr>
+                            <p>Fin-tube exchangers (Air coolers, heaters)</p>
+                            <hr class="left"><div class="clear"></div>
+                            <div class="tombol"><img class="left" src="{{ app.request.baseurl }}/asset/images/button-play1.png" alt="play"> &nbsp; <a href="{{ path('service', {lang: lang_active}) }}" class="learn">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a class="lightbox" href="{{ app.request.baseurl }}/asset/images/nuklir.jpg">
+                        <img src="{{ app.request.baseurl }}/asset/images/nuklir.jpg" alt="nuklir" class="thumb_pict">
+                        </a>
+                        <div class="caption text-left">
+                            <h3>Pressure Vessels / Process Equipments</h3>
+                            <p class="atas">Distillation/absorpation columns</p>
+                            <hr>
+                            <p>Reactor, Autoclaves</p>
+                            <hr>
+                            <p>Separators, filters, strippers</p>
+                            <hr>
+                            <p>Agitators, Polymerisation vessels</p>
+                            <hr>
+                            <p>Jacketed vessels, limpet colls</p>
+                            <a href="#"><p>More...</p></a>
+                            <hr class="left"><div class="clear"></div>
+                            <div class="tombol"><img class="left" src="{{ app.request.baseurl }}/asset/images/button-play1.png" alt="play"> &nbsp; <a href="{{ path('service', {lang: lang_active}) }}" class="learn">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                   <div class="thumbnail">
+                        <a class="lightbox" href="{{ app.request.baseurl }}/asset/images/tandon.jpg">
+                        <img src="{{ app.request.baseurl }}/asset/images/tandon.jpg" alt="Storage Equipments" class="thumb_pict">
+                        </a>
+                         <div class="caption text-left">
+                            <h3>Storage Equipments</h3>
+                            <p class="atas">Bulk LPG storage bullets</p>
+                            <hr>
+                            <p>Oil/Gas storage tanks</p>
+                            <hr>
+                            <p>Air receivers, gas holders</p>
+                            <hr>
+                            <p>Storages silos</p>
+                            <hr>
+                            <p>Tanks for storage of acids and other chemicals</p>
+                            <hr class="left"><div class="clear"></div>
+                            <div class="tombol"><img class="left" src="{{ app.request.baseurl }}/asset/images/button-play1.png" alt="play"> &nbsp; <a href="{{ path('service', {lang: lang_active}) }}" class="learn">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                   <div class="thumbnail">
+                        <a class="lightbox" href="{{ app.request.baseurl }}/asset/images/mesin.jpg">
+                        <img src="{{ app.request.baseurl }}/asset/images/mesin.jpg" alt="mesin" class="thumb_pict">
+                        </a>
+                         <div class="caption text-left">
+                            <h3>Specialty Equipments</h3>
+                            <p class="atas">Primary & secondary reformers</p>
+                            <hr>
+                            <p>EDC Crackers</p>
+                            <hr>
+                            <p>Rotary/Fludized bed dryers</p>
+                            <hr>
+                            <p>Hydrocrackers</p>
+                            <hr>
+                            <p>Cyclones, Scrubbers</p>
+                            <hr>
+                            <a href="#"><p>More...</p></a>
+                            <hr class="left"><div class="clear"></div>
+                            <div class="tombol"><img class="left" src="{{ app.request.baseurl }}/asset/images/button-play1.png" alt="play"> &nbsp; <a href="{{ path('service', {lang: lang_active}) }}" class="learn">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</section>
+<!--akhir activity-->
+
+<!--client-->
+<section class="client">
+    <div class="container">
+        <div class="subtitle text-center">
+            <p>OUR CLIENTS</p>
+        </div>
+        <div class="title text-center">
+            <p>We have worked with Indonesia & International Top companies</p>
+        </div>
+
+        <div class="lists_client_icon">
+            <div class="row">
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/pertamina.jpg" alt="pertamina">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/donggi.jpg" alt="donggi">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/pusri.jpg" alt="pusri">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/enersol.jpg" alt="enersol">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12 last">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/semen-gresik.jpg" alt="gresik">
+                    </div>
+                </div>
+            </div>
+            <div class="lines-greys"></div>
+            <div class="row">
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/ansaldo.jpg" alt="ansaldo">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/waru.jpg" alt="waru">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/petrokimia.jpg" alt="petrokimia">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/pupuk.jpg" alt="pupuk">
+                    </div>
+                </div>
+                <div class="col-md-15 col-sm-15 col-xs-12 last">
+                    <div class="items">
+                        <img class="img-responsive" src="{{ app.request.baseurl }}/asset/images/panca.jpg" alt="panca">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</section>
+<!--akhir client-->
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}

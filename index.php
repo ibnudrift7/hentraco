@@ -50,28 +50,28 @@ $app['set_References'] = $set_References;
 $app["twig"]->addGlobal("set_References", $set_References);
 
 // $app->before(function (Request $request) use ($app) {
-//     if (!isset($_GET['lang'])) {
-//         return $app->redirect($app['url_generator']->generate('homepage').'?lang=en');
-//     }
+    //     if (!isset($_GET['lang'])) {
+    //         return $app->redirect($app['url_generator']->generate('homepage').'?lang=en');
+    //     }
 
-//     $app['twig']->addGlobal('lang_active', $_GET['lang']);
+    //     $app['twig']->addGlobal('lang_active', $_GET['lang']);
 
-//     $urls = $_SERVER['REQUEST_URI'];
-//     $urls = substr($urls, 0, -8);
-//     $app['twig']->addGlobal('current_page_name', $urls);
+    //     $urls = $_SERVER['REQUEST_URI'];
+    //     $urls = substr($urls, 0, -8);
+    //     $app['twig']->addGlobal('current_page_name', $urls);
 
-//     // call text dual language
-//     $lang_message = array();
-//     if (isset($_GET['lang'])) {
-//         if ($_GET['lang'] == 'id') {
-//             $lang_message = include('lang/id/app.php');
-//         } else {
-//             $lang_message = include('lang/en/app.php');
-//         }
-//     }
+    //     // call text dual language
+    //     $lang_message = array();
+    //     if (isset($_GET['lang'])) {
+    //         if ($_GET['lang'] == 'id') {
+    //             $lang_message = include('lang/id/app.php');
+    //         } else {
+    //             $lang_message = include('lang/en/app.php');
+    //         }
+    //     }
 
-//     $app["twig"]->addGlobal("lang_message", $lang_message);
-// });
+    //     $app["twig"]->addGlobal("lang_message", $lang_message);
+    // });
 
 // ------------------ Homepage ------------------------
 $app->get('/', function () use ($app) {
@@ -90,34 +90,6 @@ $app->get('/about', function () use ($app) {
     ));
 })
 ->bind('about');
-
-// ------------------ service ------------------
-$app->get('/service', function () use ($app) {
-
-    return $app['twig']->render('page/service.twig', array(
-        'layout' => 'layouts/inside.twig',
-    ));
-})
-->bind('service');
-
-// ------------------ reference ------------------
-$app->get('/reference', function () use ($app) {
-
-    $iset_categroy = $_GET['cat'];
-    if ( $iset_categroy ) {
-
-        $res = getDataReferencebyCat($iset_categroy);
-    }else{
-        $res = getAllReference();
-    }
-
-    return $app['twig']->render('page/reference.twig', array(
-        'layout' => 'layouts/inside.twig',
-        'model' => $res,
-        'actives'=> isset($_GET['cat'])? $_GET['cat'] : '',
-    ));
-})
-->bind('reference');
 
 // ------------------ contact ---------------------------------
 $app->match('/contact', function (Request $request) use ($app) {

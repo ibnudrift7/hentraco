@@ -14,9 +14,9 @@
     function connectDb(){
         $dbcon = array(
                 'host'=>'localhost',
-                'user'=>'puspetindo_root1',
-                'pass'=>'g!InPNKTs$g9',
-                'db'=>'puspetindo_new2',
+                'user'=>'root',
+                'pass'=>'',
+                'db'=>'hentraco',
         );
             
         $mysqli = mysqli_connect($dbcon['host'], $dbcon['user'], $dbcon['pass'], $dbcon['db']); 
@@ -44,40 +44,40 @@
     //     return $data;
     // }
 
-    function getAllCategorys()
-    {
-        $model = mysqli_query(connectDb(), "SELECT * FROM `reference_list` GROUP BY `kategori` ORDER BY `id` ASC");
-        $data = array();
+    // function getAllCategorys()
+    // {
+    //     $model = mysqli_query(connectDb(), "SELECT * FROM `reference_list` GROUP BY `kategori` ORDER BY `id` ASC");
+    //     $data = array();
 
-        while ($result = mysqli_fetch_assoc($model)) {
-            $data[] = $result;
-        }
-        return $data;
-    }
+    //     while ($result = mysqli_fetch_assoc($model)) {
+    //         $data[] = $result;
+    //     }
+    //     return $data;
+    // }
 
-    function getAllReference()
-    {
-        $model = mysqli_query(connectDb(), "SELECT * FROM `reference_list` ORDER BY `id` ASC");
-        $data = array();
+    // function getAllReference()
+    // {
+    //     $model = mysqli_query(connectDb(), "SELECT * FROM `reference_list` ORDER BY `id` ASC");
+    //     $data = array();
 
-        while ($result = mysqli_fetch_assoc($model)) {
-            $data[] = $result;
-        }
-        return $data;
-    }
+    //     while ($result = mysqli_fetch_assoc($model)) {
+    //         $data[] = $result;
+    //     }
+    //     return $data;
+    // }
 
-    function getDataReferencebyCat($cats_name)
-    {
-        $sql = 'SELECT * FROM `reference_list` WHERE `kategori` = "'.$cats_name.'"';
-        $model = mysqli_query(connectDb(), $sql);
-        $data = array();
+    // function getDataReferencebyCat($cats_name)
+    // {
+    //     $sql = 'SELECT * FROM `reference_list` WHERE `kategori` = "'.$cats_name.'"';
+    //     $model = mysqli_query(connectDb(), $sql);
+    //     $data = array();
 
-        while ($result = mysqli_fetch_assoc($model)) {
-            $data[] = $result;
-        }
-        return $data;
-    }
+    //     while ($result = mysqli_fetch_assoc($model)) {
+    //         $data[] = $result;
+    //     }
+    //     return $data;
+    // }
 
-    $set_References = getAllReference();
+    // $set_References = getAllReference();
 
-    $set_CategoryRef = getAllCategorys();
+    // $set_CategoryRef = getAllCategorys();

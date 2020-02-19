@@ -91,6 +91,24 @@ $app->get('/about', function () use ($app) {
 })
 ->bind('about');
 
+// ------------------ Machine ------------------
+$app->get('/machine', function () use ($app) {
+
+    return $app['twig']->render('page/machine.twig', array(
+        'layout' => 'layouts/inside.twig',
+    ));
+})
+->bind('machine');
+
+// ------------------ About ------------------
+$app->get('/machine_detail', function () use ($app) {
+
+    return $app['twig']->render('page/machine_detail.twig', array(
+        'layout' => 'layouts/inside.twig',
+    ));
+})
+->bind('machine_detail');
+
 // ------------------ contact ---------------------------------
 $app->match('/contact', function (Request $request) use ($app) {
 

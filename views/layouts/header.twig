@@ -14,7 +14,7 @@
           </div>
           <div class="col-md-30 text-right">
               <div class="blocks_vw_menu pt-3">
-                <a href="#">
+                <a href="javascript:;" class="showmenu_barresponsive">
                   {% if menu == 'homepage' and menu != 'machine_detail' and menu != 'location' and menu != 'contact' %}
                     <img src="{{ app.request.baseurl }}/asset/images/bloc_menu_header.png" class="img-responsive" alt="logo">
                   {% else %}
@@ -26,3 +26,63 @@
       </div>
   </div>
 </header>
+
+
+<div class="outer-blok-black-menuresponss-hides" style="display: none;">
+  <div class="prelatife container">
+    <div class="clear height-45"></div>
+    <div class="float-right mb-3">
+      <div class="hidesmenu-frightd"><a href="#" class="closemrespobtn"><img src="{{ app.request.baseurl }}/asset/images/closen-btn.png" alt=""></a></div>
+    </div>
+    <div class="blocksn_logo-centers">
+      <img src="{{ app.request.baseurl }}/asset/images/lgo-popups-nn.png" alt="logo" class="img img-fluid d-block mx-auto">
+    </div>
+    <div class="height-30 hidden-xs"></div>
+    <div class="menu-sheader-datals py-4">
+      <ul class="list-unstyled">
+        <li><a href="{{ path('homepage') }}">Home</a></li>
+        <li><a href="{{ path('about') }}">About Us</a></li>
+        <li><a href="{{ path('machine') }}">Our Machine</a></li>
+        <li><a href="{{ path('location') }}">Our Location</a></li>
+        <li><a href="{{ path('contact') }}">Inquire Now</a></li>
+      </ul>
+    </div>
+    <div class="blocks-info-menubtm d-block mx-auto">
+      <span>Need Information?</span>
+      <div class="py-2 my-1"></div>
+      <div class="row justify-content-center">
+        <div class="col-md-30 col-sm-30 col-6">
+          <i class="fa fa-whatsapp"></i>
+          <div class="py-1"></div>
+          <p>Click to Whatsapp Chat<br>
+          <a href="tel:+62816848361">081 6848 361</a></p>
+        </div>
+        <div class="col-md-30 col-sm-30 col-6">
+          <i class="fa fa-envelope-o"></i>
+          <div class="py-1"></div>
+          <p>Send Us Email <br>
+          <a target="_blank" href="mailto:info@thekreator.com">info@hentraco.co.id</a></p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    // show and hide menu responsive
+    $('a.showmenu_barresponsive').on('click', function() {
+      $('.outer-blok-black-menuresponss-hides').slideToggle('slow');
+      return false;
+    });
+    $('a.closemrespobtn').on('click', function() {
+      $('.outer-blok-black-menuresponss-hides').slideUp('slow');
+      return false;
+    });
+
+  })
+</script>

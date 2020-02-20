@@ -2,7 +2,7 @@
 {% block maincontent %}
 <body data-spy="scroll" id="page-top">
 		<div class="wrapper">
-			{# {% include "/layouts/header.twig" %} #}
+			{% include "/layouts/header.twig" with { 'menu': block('menu') } %}
 
 			<!-- Start fcs -->
 			<div class="fcs-wrapper outers_fcs_wrapper prelatife wrapper-slide">

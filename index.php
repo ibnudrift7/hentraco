@@ -109,6 +109,15 @@ $app->get('/machine_detail', function () use ($app) {
 })
 ->bind('machine_detail');
 
+// ------------------ Location ------------------
+$app->get('/location', function () use ($app) {
+
+    return $app['twig']->render('page/location.twig', array(
+        'layout' => 'layouts/inside.twig',
+    ));
+})
+->bind('location');
+
 // ------------------ contact ---------------------------------
 $app->match('/contact', function (Request $request) use ($app) {
 

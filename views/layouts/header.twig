@@ -4,7 +4,7 @@
           <div class="col-md-30">
               <div class="navbar-header">
                   <a href="{{ path('homepage', {lang: lang_active}) }}" class="navbar-brand">
-                    {% if menu == 'homepage' %}
+                    {% if menu == 'homepage' and menu != 'machine_detail' and menu != 'location' and menu != 'contact' %}
                       <img src="{{ app.request.baseurl }}/asset/images/logo-headers_tln.png" class="img-responsive" alt="logo">
                     {% else %}
                       <img src="{{ app.request.baseurl }}/asset/images/logo-header-inside.png" class="img-responsive" alt="logo">
@@ -15,7 +15,7 @@
           <div class="col-md-30 text-right">
               <div class="blocks_vw_menu pt-3">
                 <a href="#">
-                  {% if menu == 'homepage' %}
+                  {% if menu == 'homepage' and menu != 'machine_detail' and menu != 'location' and menu != 'contact' %}
                     <img src="{{ app.request.baseurl }}/asset/images/bloc_menu_header.png" class="img-responsive" alt="logo">
                   {% else %}
                     <img src="{{ app.request.baseurl }}/asset/images/bloc_menu_header_inside.png" alt="" class="img img-fluid">

@@ -18,7 +18,7 @@
                     </div>
                     <div class="d-inline-block align-middle">
                         <p>WHATSAPP CHAT <br>
-                            <a href="#">081 6848 361 (Click)</a></p>
+                            <a href="https://wa.me/62816848361">081 6848 361 (Click)</a></p>
                     </div>
                 </li>
                 <li class="list-inline-item">
@@ -46,16 +46,12 @@
         <div class="col-md-15 py-5 my-auto back-blue">
             <div class="left-space pl-85 mx-2 lefts_filter">
                 <div class="py-4"></div>
-                <h3>Our Machine Tool &<br>Industrial Machinery</h3>
+                <h3>Our Machine Tool & <br>Industrial Machinery</h3>
                 <div class="py-2"></div>
                 <ul class="list-unstyled">
-                    <li class="active"><a href="#">Lathe Machine</a></li>
-                    <li><a href="#">Milling Machine</a></li>
-                    <li><a href="#">EDM Machine</a></li>
-                    <li><a href="#">CNC Machine</a></li>
-                    <li><a href="#">Grinding Machine</a></li>
-                    <li><a href="#">DRO Machine</a></li>
-                    <li><a href="#">Others</a></li>
+                    {% for key, item in set_CategoryRef %}
+                    <li {% if key == 15 %}class="active"{% endif %}><a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}">{{ item.title|title }}</a></li>
+                    {% endfor %}
                 </ul>
                 <div class="py-4"></div>
                 <div class="celar"></div>
@@ -82,7 +78,7 @@
                                 <h5>Lathe Machine</h5>
                                 <div class="py-2"></div>
                                 <p>We present the high performance Lathe machines for your industrial purpose. We are the sole agent and distributor for well known brand such as Chinhung Kinwa Lathe. </p>
-                                <a href="#" class="btn btn-link">LEARN MORE</a>
+                                <a href="{{ url('machine_detail', {'id': 1, 'slug': 'lathe machine'|lower } ) }}" class="btn btn-link">LEARN MORE</a>
                             </div>      
                         </div>
                     </div>
@@ -97,30 +93,35 @@
 <section class="home-sec-4">
     <div class="row no-gutters">
         <div class="col-md-15">
-            <div class="pictures prelatife"><img src="{{ app.request.baseurl }}/asset/images/banners_ft_1.jpg" alt="" class="img img-fluid"></div>    
+            <div class="pictures prelatife">
+                <img src="{{ app.request.baseurl }}/asset/images/banners_ft_0.jpg" alt="" class="img img-fluid w-100">
+                <div class="pos_t t1">
+                    <h6>More On Our<br>Website</h6>
+                </div>
+            </div>    
         </div>
 
         <div class="col-md-15">
             <div class="pictures prelatife">
-                <img src="{{ app.request.baseurl }}/asset/images/banners_ft_1.jpg" alt="" class="img img-fluid">
+                <img src="{{ app.request.baseurl }}/asset/images/banners_ft_1.jpg" alt="" class="img img-fluid w-100">
                 <div class="pos_t">
-                    <a href="#"><h6>About Us</h6></a>
+                    <a href="{{ path('about') }}"><h6>About Us</h6></a>
                 </div>
             </div>    
         </div>
         <div class="col-md-15">
             <div class="pictures prelatife">
-                <img src="{{ app.request.baseurl }}/asset/images/banners_ft_2.jpg" alt="" class="img img-fluid">
-                <div class="pos_t">
-                    <a href="#"><h6>Our Location</h6></a>
+                <img src="{{ app.request.baseurl }}/asset/images/banners_ft_2.jpg" alt="" class="img img-fluid w-100">
+                 <div class="pos_t">
+                    <a href="{{ path('location') }}"><h6>Our Location</h6></a>
                 </div>
             </div>    
         </div>
         <div class="col-md-15">
             <div class="pictures prelatife">
-                <img src="{{ app.request.baseurl }}/asset/images/banners_ft_3.jpg" alt="" class="img img-fluid">
-                <div class="pos_t">
-                    <a href="#"><h6>Inquire Now</h6></a>
+                <img src="{{ app.request.baseurl }}/asset/images/banners_ft_3.jpg" alt="" class="img img-fluid w-100">
+                 <div class="pos_t">
+                     <a href="{{ path('contact') }}"><h6>Inquire Now</h6></a>
                 </div>
             </div>    
         </div>

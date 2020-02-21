@@ -1,22 +1,22 @@
-<header class="head">
+<header class="head {% if menu != 'homepage' %}inside_head{% endif %}">
   <div class="container_def mx-auto d-block">
       <div class="row">
-          <div class="col-md-30">
+          <div class="col-md-30 col-40">
               <div class="navbar-header">
                   <a href="{{ path('homepage', {lang: lang_active}) }}" class="navbar-brand">
                     {% if menu == 'homepage' and menu != 'machine_detail' and menu != 'location' and menu != 'contact' %}
-                      <img src="{{ app.request.baseurl }}/asset/images/logo-headers_tln.png" class="img-responsive" alt="logo">
+                      <img src="{{ app.request.baseurl }}/asset/images/logo-headers_tln.png" class="img img-fluid" alt="logo">
                     {% else %}
-                      <img src="{{ app.request.baseurl }}/asset/images/logo-header-inside.png" class="img-responsive" alt="logo">
+                      <img src="{{ app.request.baseurl }}/asset/images/logo-header-inside.png" class="img img-fluid" alt="logo">
                     {% endif %}
                   </a>
               </div>
           </div>
-          <div class="col-md-30 text-right">
+          <div class="col-md-30 col-20 text-right">
               <div class="blocks_vw_menu pt-3">
                 <a href="javascript:;" class="showmenu_barresponsive">
                   {% if menu == 'homepage' and menu != 'machine_detail' and menu != 'location' and menu != 'contact' %}
-                    <img src="{{ app.request.baseurl }}/asset/images/bloc_menu_header.png" class="img-responsive" alt="logo">
+                    <img src="{{ app.request.baseurl }}/asset/images/bloc_menu_header.png" class="img img-fluid" alt="logo">
                   {% else %}
                     <img src="{{ app.request.baseurl }}/asset/images/bloc_menu_header_inside.png" alt="" class="img img-fluid">
                   {% endif %}
@@ -51,13 +51,13 @@
       <span>Need Information?</span>
       <div class="py-2 my-1"></div>
       <div class="row justify-content-center">
-        <div class="col-md-30 col-sm-30 col-6">
+        <div class="col-md-30 col-sm-30 col-30">
           <i class="fa fa-whatsapp"></i>
           <div class="py-1"></div>
           <p>Click to Whatsapp Chat<br>
           <a href="tel:+62816848361">081 6848 361</a></p>
         </div>
-        <div class="col-md-30 col-sm-30 col-6">
+        <div class="col-md-30 col-sm-30 col-30">
           <i class="fa fa-envelope-o"></i>
           <div class="py-1"></div>
           <p>Send Us Email <br>

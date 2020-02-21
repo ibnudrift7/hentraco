@@ -1,4 +1,7 @@
 <?php 
+
+ini_set("allow_url_fopen", 1);
+
 // function get database $dbcon
 // mysql_connect($dbcon['host'], $dbcon['user'], $dbcon['pass']);
 // mysql_select_db($dbcon['db']);
@@ -44,16 +47,29 @@
     //     return $data;
     // }
 
-    // function getAllCategorys()
-    // {
-    //     $model = mysqli_query(connectDb(), "SELECT * FROM `reference_list` GROUP BY `kategori` ORDER BY `id` ASC");
-    //     $data = array();
+    function getAllCategorys()
+    {
+        // $model = mysqli_query(connectDb(), "SELECT * FROM `reference_list` GROUP BY `kategori` ORDER BY `id` ASC");
 
-    //     while ($result = mysqli_fetch_assoc($model)) {
-    //         $data[] = $result;
-    //     }
-    //     return $data;
-    // }
+        $json = file_get_contents('https://api.hentraco.com/api/rest/getCategory');
+        $data = json_decode($json);
+
+        // $data = array();
+        // while ($result = mysqli_fetch_assoc($model)) {
+        //     $data[] = $result;
+        // }
+        return $data;
+    }
+
+    function getProductsby($id_cat)
+    {
+        // $model = mysqli_query(connectDb(), "SELECT * FROM `reference_list` GROUP BY `kategori` ORDER BY `id` ASC");
+
+        $json = file_get_contents('https://api.hentraco.com/api/rest/getproducts?category='. intval($id_cat) );
+        $data = json_decode($json);
+
+        return $data;
+    }
 
     // function getAllReference()
     // {
@@ -80,4 +96,4 @@
 
     // $set_References = getAllReference();
 
-    // $set_CategoryRef = getAllCategorys();
+    $set_CategoryRef = getAllCategorys();

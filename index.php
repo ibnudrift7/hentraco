@@ -43,11 +43,11 @@ $app->register(new Silex\Provider\ValidatorServiceProvider());
 $youtube_ids = 'rIyEN_rimz4';
 $app["twig"]->addGlobal("youtube_id", $youtube_ids);
 
-$app['set_category_refALl'] = $set_CategoryRef;
-$app["twig"]->addGlobal("set_category_refALl", $set_CategoryRef);
+$app['set_CategoryRef'] = $set_CategoryRef;
+$app["twig"]->addGlobal("set_CategoryRef", $set_CategoryRef);
 
-$app['set_References'] = $set_References;
-$app["twig"]->addGlobal("set_References", $set_References);
+// $app['set_References'] = $set_References;
+// $app["twig"]->addGlobal("set_References", $set_References);
 
 // $app->before(function (Request $request) use ($app) {
     //     if (!isset($_GET['lang'])) {
@@ -103,8 +103,14 @@ $app->get('/machine', function () use ($app) {
 // ------------------ About ------------------
 $app->get('/machine_detail', function () use ($app) {
 
+    // $app['set_CategoryRef'] = $set_CategoryRef;
+    // $app["twig"]->addGlobal("set_CategoryRef", $set_CategoryRef);
+    $data = getProductsby($_GET['id']);
+
     return $app['twig']->render('page/machine_detail.twig', array(
         'layout' => 'layouts/inside.twig',
+        'model'=> $data,
+        'names'=> isset($_GET['slug'])? ucwords($_GET['slug']): '',
     ));
 })
 ->bind('machine_detail');

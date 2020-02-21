@@ -7,7 +7,7 @@
     {% include "/layouts/header.twig" with { 'menu': block('menu') } %}
 
     <div class="pictures">
-        <img src="{{ app.request.baseurl }}/asset/images/ill-inquire.jpg" alt="" class="img img-fluid">
+        <img src="{{ app.request.baseurl }}/asset/images/ill-inquire.jpg" alt="" class="img img-fluid w-100">
     </div>
     <div class="nblocks_desc text-center">
         <div class="inner">
@@ -50,8 +50,7 @@
                         </div>
                     {% endif %}
                 </div>
-                <!-- Default input name -->
-                <label for="defaultFormRegisterNameEx" class="blue-text">YOUR NAME</label>
+                 <label for="defaultFormRegisterNameEx" class="blue-text">YOUR NAME</label>
                 <input type="text" id="defaultFormRegisterNameEx" name="Contact[name]" class="form-control">
                 
                 <br>
@@ -64,22 +63,23 @@
 
                 <!-- Default input email -->
                 <label for="defaultFormRegisterphoneEx" class="blue-text">INDUSTRY / BUSINESS</label>
-                <input type="number" id="defaultFormRegisterConfirmEx" name="Contact[phone]" class="form-control">
+                <input type="text" id="defaultFormRegisterConfirmEx" name="Contact[phone]" class="form-control">
 
                 <br>
                 <!-- Default input email -->
                 <label for="defaultFormRegisterEmailEx" class="blue-text">CONTACT NUMBER</label>
-                <input type="email" id="defaultFormRegisterEmailEx" name="Contact[phone]" class="form-control">
+                <input type="phone" id="defaultFormRegisterEmailEx" name="Contact[phone]" class="form-control">
                 <br>
                 <!-- Default input email -->
                 <label for="defaultFormRegisterEmailEx" class="blue-text">ADDRESS</label>
-                <input type="email" id="defaultFormRegisterEmailEx" name="Contact[address]" class="form-control">
+                <input type="text" id="defaultFormRegisterEmailEx" name="Contact[address]" class="form-control">
                 <br>
                 
                 <!-- Default input password -->
                 <label for="defaultFormRegistermassageEx" class="blue-text">YOUR INQUIRY / NOTES</label>
-                <input type="text" id="defaultFormRegisterPasswordEx" name="Contact[message]" class="form-control">
+                <textarea class="form-control" name="Contact[message]" id="" rows="3"></textarea>
                 <br>
+                
                 <div class="row">
                     <div class="col-60">
                         <div class="g-recaptcha" data-sitekey="6LdcbVEUAAAAAHaXcHXpJNzulE_o9sPgIH2WUHBf"></div>

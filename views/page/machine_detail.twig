@@ -7,7 +7,7 @@
     {% include "/layouts/header.twig" with { 'menu': block('menu') } %}
 
     <div class="pictures">
-        <img src="{{ app.request.baseurl }}/asset/images/ill-machine-detail.jpg" alt="" class="img img-fluid">
+        <img src="{{ app.request.baseurl }}/asset/images/ill-machine-detail.jpg" alt="" class="img img-fluid w-100">
     </div>
     <div class="nblocks_desc text-center">
         <div class="inner">
@@ -23,76 +23,65 @@
             <div class="py-5"></div>
             
             <div class="text-center tops_titledetail">
-                <h1>Lathe Machine</h1>
+                <h1>{{ names }}</h1>
             </div>
             <div class="tops_filter">
                 <div class="row">
                     <div class="col-md-20">
                         <form class="form-inline">
                           <label for="inlineForm">See other category</label>
-                          <select name="categorys" id="">
-                              <option value="">Lathe</option>
-                              <option value="">Lathe 1</option>
-                              <option value="">Lathe 2</option>
+                          <select class="change_cat" name="categorys" id="">
+                              <option value="">Select</option>
+                              {% for key, item in set_CategoryRef %}
+                              <option value="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}">{{ item.title|title }}</option>
+                              {% endfor %}
                           </select>
                         </form>
+                        <script type="text/javascript">
+                        $(function(){
+                            $('.change_cat').change(function(){
+                                var sn_url = $(this).val();
+                                window.open(sn_url, "_SELF");
+                                return false;
+                            });
+                        });
+                        </script>
                     </div>
                     <div class="col-md-20">
                         <p class="m-0">Our Machine Tool & Industrial Machinery</p>
                     </div>
                     <div class="col-md-20 text-right">
-                        <a href="#" class="btn btn-link p-0 backs_to">Back to product category</a>
+                        <a href="#" onclick="window.history.back();" class="btn btn-link p-0 backs_to">Back to product category</a>
                     </div>
                 </div>
             </div>
             <div class="py-3 my-4"></div>
 
             <div class="lists_detail_products">
-
+                {% for key, item in model %}
                 <div class="items">
                     <div class="row no-gutters">
                         <div class="col-md-30">
                             <div class="pictures back-white">
-                                <img src="{{ app.request.baseurl }}/asset/images/machine_n1_big.jpg" alt="" class="img img-fluid d-block mx-auto">
+                                <img src="{{ item.image }}" alt="" class="img img-fluid d-block mx-auto">
                             </div>
                         </div>
                         <div class="col-md-30 back-grey my-auto text-left p-4">
                             <div class="descriptions p-5">
-                                <h4>Chinhung / Kinwa Lathe Machine</h4>
+                                <h4>{{ item.title_product|title }}</h4>
                                 <div class="py-3"></div>
                                 <span>PRODUCT DESCRIPTION</span>
-                                <p>The high performance Lathe machines for your industrial purpose. We are the sole agent and distributor for Chinhung Kinwa Lathe.</p>
+                                {{ item.content|raw }}
                                 <div class="py-3"></div>
                                 <span>Product Variants</span>
-                                <p>CH430x1100, CH530x1100</p>
+                                {{ item.varian|raw }}
                                 
                                 <div class="clear"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="items">
-                    <div class="row no-gutters">
-                        <div class="col-md-30">
-                            <div class="pictures back-white">
-                                <img src="{{ app.request.baseurl }}/asset/images/machine_n1_big.jpg" alt="" class="img img-fluid d-block mx-auto">
-                            </div>
-                        </div>
-                        <div class="col-md-30 back-grey my-auto text-left p-4">
-                            <div class="descriptions p-5">
-                                <h4>Chinhung / Kinwa Lathe Machine</h4>
-                                <div class="py-3"></div>
-                                <span>PRODUCT DESCRIPTION</span>
-                                <p>The high performance Lathe machines for your industrial purpose. We are the sole agent and distributor for Chinhung Kinwa Lathe.</p>
-                                <div class="py-3"></div>
-                                <span>Product Variants</span>
-                                <p>CH430x1100, CH530x1100</p>
-                                
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
 

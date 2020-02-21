@@ -7,7 +7,7 @@
     {% include "/layouts/header.twig" with { 'menu': block('menu') } %}
 
     <div class="pictures">
-        <img src="{{ app.request.baseurl }}/asset/images/ill-machine.jpg" alt="" class="img img-fluid">
+        <img src="{{ app.request.baseurl }}/asset/images/ill-machine.jpg" alt="" class="img img-fluid w-100">
     </div>
     <div class="nblocks_desc text-center">
         <div class="inner">
@@ -33,35 +33,19 @@
 
             <div class="lists_default_datacategorys">
                 <div class="row">
-                    {% for i in 0..5 %}
+
+                    {% for key, item in set_CategoryRef %}
                     <div class="col-md-15">
                         <div class="items prelatife">
-                            <img src="{{ app.request.baseurl }}/asset/images/ex-products_1.jpg" alt="" class="img img-fluid">
+                            <img src="{{ item.image }}" alt="{{ item.title|title }}" class="img img-fluid">
                             <div class="info">
                                 <div class="row">
                                     <div class="col-40">
-                                        <h6>Lathe Machine</h6>
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower} ) }}"><h6>{{ item.title|title }}</h6></a>
                                     </div>
                                     <div class="col-20 text-right">
                                         <div class="rghts_icon">
-                                            <a class="btn" href="#"><i class="fa fa-chevron-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-15">
-                        <div class="items prelatife">
-                            <img src="{{ app.request.baseurl }}/asset/images/ex-products_2.jpg" alt="" class="img img-fluid">
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-40">
-                                        <h6>Lathe Machine</h6>
-                                    </div>
-                                    <div class="col-20 text-right">
-                                        <div class="rghts_icon">
-                                            <a class="btn" href="#"><i class="fa fa-chevron-right"></i></a>
+                                            <a class="btn" href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}"><i class="fa fa-chevron-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -69,6 +53,7 @@
                         </div>
                     </div>
                     {% endfor %}
+
                 </div>
             </div>
             <div class="py-5"></div>

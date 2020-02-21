@@ -111,6 +111,7 @@ $app->get('/machine_detail', function () use ($app) {
         'layout' => 'layouts/inside.twig',
         'model'=> $data,
         'names'=> isset($_GET['slug'])? ucwords($_GET['slug']): '',
+        'jumlah_data'=> count($data),
     ));
 })
 ->bind('machine_detail');

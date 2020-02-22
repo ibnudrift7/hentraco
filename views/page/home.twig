@@ -42,15 +42,15 @@
 </section>
 
 <section class="blocks_home-2">
-    <div class="row">
+    <div class="row no-gutters">
         <div class="col-md-15 py-5 my-auto back-blue">
             <div class="left-space pl-85 mx-2 lefts_filter">
                 <div class="py-4"></div>
                 <h3>Our Machine Tool & <br>Industrial Machinery</h3>
                 <div class="py-2"></div>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled selector_slides">
                     {% for key, item in set_CategoryRef %}
-                    <li {% if key == 15 %}class="active"{% endif %}><a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}">{{ item.title|title }}</a></li>
+                    <li data-id="{{ key }}" class="{% if key == 15 %}active{% endif %}"><a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}">{{ item.title|title }}</a></li>
                     {% endfor %}
                 </ul>
                 <div class="py-4"></div>
@@ -69,19 +69,33 @@
                         </div>
                     </div>
                     <div class="py-2 my-1"></div>
-                    <div class="row">
-                        <div class="col-md-25">
-                            <div class="pictures"><img src="{{ app.request.baseurl }}/asset/images/machines-n1.jpg" alt="" class="img img-fluid"></div>
+
+                    {# start slider #}
+                    <div id="carousel_exHome" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        {% for key, item in set_CategoryRef %}
+                        <div class="carousel-item {% if key == 0 %}active{% endif %}">
+                            <div class="row">
+                                <div class="col-md-25">
+                                    <div class="pictures">
+                                        <img src="{{ item.image }}" alt="" class="img img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-35">
+                                    <div class="desc_info py-3">
+                                        <h5>{{ item.title|title }}</h5>
+                                        <div class="py-2"></div>
+                                        <p>{{ item.content|raw }}</p>
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}" class="btn btn-link">LEARN MORE</a>
+                                    </div>      
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-35">
-                            <div class="desc_info py-3">
-                                <h5>Lathe Machine</h5>
-                                <div class="py-2"></div>
-                                <p>We present the high performance Lathe machines for your industrial purpose. We are the sole agent and distributor for well known brand such as Chinhung Kinwa Lathe. </p>
-                                <a href="{{ url('machine_detail', {'id': 1, 'slug': 'lathe machine'|lower } ) }}" class="btn btn-link">LEARN MORE</a>
-                            </div>      
-                        </div>
-                    </div>
+                        {% endfor %}
+                      </div>
+                    </div>                    
+                    {# end slider #}
+
                 </div>
 
                 <div class="py-4"></div>
@@ -128,5 +142,16 @@
     </div>
 </section>
 
-	
+<script type="text/javascript">
+    $('.selector_slides li').on('click', function(){
+        var act_id = parseInt( $(this).attr('data-id') );
+        console.log(act_id);
+        $('#carousel_exHome').carousel(act_id);
+        
+        $('.selector_slides li').removeClass('active');
+        $(this).addClass('active');
+        return false;
+    });
+</script>
+
 {% endblock %}

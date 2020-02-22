@@ -79,14 +79,15 @@ $(function(){
     $('.t-backtop').hide();
     
     var $win = $(window);
-         $win.scroll(function () {
-             if ($win.scrollTop() == 0)
-             $('.t-backtop').hide();
-             else if ($win.height() + $win.scrollTop() != $(document).height() || $win.height() + $win.scrollTop() > 500) {
-             $('.t-backtop').show();
-             }
-         });
-
+     $win.scroll(function () {
+         if ($win.scrollTop() == 0){
+            $('.t-backtop').hide();
+            $('header.head').removeClass('scrollview');
+         }else if ($win.height() + $win.scrollTop() != $(document).height() || $win.height() + $win.scrollTop() > 400) {
+            $('.t-backtop').show();
+            $('header.head').addClass('scrollview');
+         }
+     });
 });
 </script>
 

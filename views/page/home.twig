@@ -30,7 +30,7 @@
                     </div>
                     <div class="d-inline-block align-middle">
                         <p>EMAIL<br>
-                            <a href="mailto:info@hentraco.co.id">info@hentraco.co.id</a></p>
+                            <a href="mailto:info@hentraco.com">info@hentraco.com</a></p>
                     </div>
                 </li>
             </ul>
@@ -78,12 +78,12 @@
                             <div class="row">
                                 <div class="col-md-25">
                                     <div class="pictures">
-                                        <img src="{{ item.image }}" alt="" class="img img-fluid">
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}"><img src="{{ item.image }}" alt="" class="img img-fluid"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-35">
                                     <div class="desc_info py-3">
-                                        <h5>{{ item.title|title }}</h5>
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}"><h5>{{ item.title|title }}</h5></a>
                                         <div class="py-2"></div>
                                         <p>{{ item.content|raw }}</p>
                                         <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}" class="btn btn-link">LEARN MORE</a>

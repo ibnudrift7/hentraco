@@ -37,7 +37,9 @@
                     {% for key, item in set_CategoryRef %}
                     <div class="col-md-15">
                         <div class="items prelatife">
+                            <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower} ) }}">
                             <img src="{{ item.image }}" alt="{{ item.title|title }}" class="img img-fluid">
+                            </a>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-40">

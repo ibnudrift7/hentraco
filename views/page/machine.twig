@@ -37,17 +37,17 @@
                     {% for key, item in set_CategoryRef %}
                     <div class="col-md-15">
                         <div class="items prelatife">
-                            <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower} ) }}">
+                            <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title} ) }}">
                             <img src="{{ item.image }}" alt="{{ item.title|title }}" class="img img-fluid">
                             </a>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-40">
-                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower} ) }}"><h6>{{ item.title|title }}</h6></a>
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title} ) }}"><h6>{{ item.title }}</h6></a>
                                     </div>
                                     <div class="col-20 text-right">
                                         <div class="rghts_icon">
-                                            <a class="btn" href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}"><i class="fa fa-chevron-right"></i></a>
+                                            <a class="btn" href="{{ url('machine_detail', {'id': item.id, 'slug': item.title } ) }}"><i class="fa fa-chevron-right"></i></a>
                                         </div>
                                     </div>
                                 </div>

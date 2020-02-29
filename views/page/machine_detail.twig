@@ -33,7 +33,7 @@
                           <select class="change_cat" name="categorys" id="">
                               <option value="">Select</option>
                               {% for key, item in set_CategoryRef %}
-                              <option value="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}">{{ item.title|title }}</option>
+                              <option value="{{ url('machine_detail', {'id': item.id, 'slug': item.title } ) }}">{{ item.title }}</option>
                               {% endfor %}
                           </select>
                         </form>
@@ -69,11 +69,11 @@
                         </div>
                         <div class="col-md-30 back-grey my-auto text-left p-4">
                             <div class="descriptions p-5">
-                                <h4>{{ item.title_product|title }}</h4>
+                                <h4>{{ item.title_product }}</h4>
                                 <div class="py-3"></div>
                                 <span>PRODUCT DESCRIPTION</span>
                                 {{ item.content|raw }}
-                                <div class="py-3"></div>
+                                <div class="py-3"></div> 
                                 <span>Product Variants</span>
                                 {{ item.varian|raw }}
                                 

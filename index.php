@@ -158,7 +158,7 @@ $app->match('/contact', function (Request $request) use ($app) {
             $errorMessage[] = 'Please Check Captcha for sending contact form!';
         }
         
-        $secret_key = "6LdcbVEUAAAAAF6pXw_VvjyEktZxIUgaFntD6DzT";
+        $secret_key = "6Lc4ddwUAAAAALCz7n5f_WhK22jD-w__QTHOaBfl";
         $url= "https://www.google.com/recaptcha/api/siteverify?secret=".$secret_key."&response=".$_POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR'];
 
         $ch = curl_init();
@@ -185,20 +185,20 @@ $app->match('/contact', function (Request $request) use ($app) {
 
         if (count($errorMessage) == 0) {
             // $app['swiftmailer.options'] = array(
-            //         'host' => 'mail.puspetindo.com',
+            //         'host' => 'mail.hentraco.com',
             //         'port' => '587',
-            //         'username' => 'no-reply@puspetindo.com',
+            //         'username' => 'no-reply@hentraco.com',
             //         'password' => 'V?#gNBE&IW6s',
             //         'encryption' => null,
             //         'auth_mode' => login
             //     );
 
             $pesan = \Swift_Message::newInstance()
-                ->setSubject('Hi, Contact Website PT. Puspetindo')
-                ->setFrom(array('no-reply@puspetindo.com'))
-                ->setTo( array('info@puspetindo.com', $data['email']) )
+                ->setSubject('Hi, Contact Website PT. Hentraco')
+                ->setFrom(array('no-reply@hentraco.com'))
+                ->setTo( array('info@hentraco.com', $data['email']) )
                 ->setBcc( array('deoryzpandu@gmail.com', 'ibnu@markdesign.net') )
-                ->setReplyTo(array('info@puspetindo.com'))
+                ->setReplyTo(array('info@hentraco.com'))
                 ->setBody($app['twig']->render('page/mail.twig', array(
                     'data' => $data,
                 )), 'text/html');

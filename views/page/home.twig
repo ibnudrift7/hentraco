@@ -50,7 +50,7 @@
                 <div class="py-2"></div>
                 <ul class="list-unstyled selector_slides">
                     {% for key, item in set_CategoryRef %}
-                    <li data-id="{{ key }}" class="{% if key == 15 %}active{% endif %}"><a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}">{{ item.title|title }}</a></li>
+                    <li data-id="{{ key }}" class="{% if key == 15 %}active{% endif %}"><a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title } ) }}">{{ item.title }}</a></li>
                     {% endfor %}
                 </ul>
                 <div class="py-4"></div>
@@ -78,15 +78,15 @@
                             <div class="row">
                                 <div class="col-md-25">
                                     <div class="pictures">
-                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}"><img src="{{ item.image }}" alt="" class="img img-fluid"></a>
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title } ) }}"><img src="{{ item.image }}" alt="" class="img img-fluid"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-35">
                                     <div class="desc_info py-3">
-                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}"><h5>{{ item.title|title }}</h5></a>
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title } ) }}"><h5>{{ item.title }}</h5></a>
                                         <div class="py-2"></div>
                                         <p>{{ item.content|raw }}</p>
-                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title|lower } ) }}" class="btn btn-link">LEARN MORE</a>
+                                        <a href="{{ url('machine_detail', {'id': item.id, 'slug': item.title } ) }}" class="btn btn-link">LEARN MORE</a>
                                     </div>      
                                 </div>
                             </div>

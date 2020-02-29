@@ -60,10 +60,15 @@
         <div class="col-md-45 py-5 my-auto">
             <div class="right-space pr-5 mx-2">
                 <div class="py-4"></div>
-                <div class="blocks_machine">
+                <div class="blocks_machine block_machine_carousels">
                     <div class="row mb-3 tops">
                         <div class="col">
-                            <h4>C.V. Hentraco specialties</h4>
+                            <div class="d-block d-sm-none">
+                                <h4>Our Machine Tool & Industrial Machinery</h4>
+                            </div>
+                            <div class="d-none d-sm-block">
+                                <h4>C.V. Hentraco specialties</h4>
+                            </div>
                             <div class="clear"></div>
                             <div class="lines-grey"></div>
                         </div>
@@ -93,6 +98,15 @@
                         </div>
                         {% endfor %}
                       </div>
+                      
+                      <div class="d-block d-sm-none">
+                        <ol class="carousel-indicators">
+                            {% for key, item in set_CategoryRef %}
+                            <li data-target="#carousel_exHome" data-slide-to="{{ key }}" class="{% if key == 0 %}active{% endif %}"></li>
+                            {% endfor %}
+                        </ol>
+                      </div>
+
                     </div>                    
                     {# end slider #}
 
@@ -110,7 +124,7 @@
             <div class="pictures prelatife">
                 <img src="{{ app.request.baseurl }}/asset/images/banners_ft_0.jpg" alt="" class="img img-fluid w-100">
                 <div class="pos_t t1">
-                    <h6>More On Our<br>Website</h6>
+                    <h6>More On Our <br>Website</h6>
                 </div>
             </div>    
         </div>

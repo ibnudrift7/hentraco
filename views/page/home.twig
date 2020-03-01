@@ -156,6 +156,9 @@
     </div>
 </section>
 
+<!--Touch Swipe-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+
 <script type="text/javascript">
     $('.selector_slides li').on('click', function(){
         var act_id = parseInt( $(this).attr('data-id') );
@@ -166,6 +169,34 @@
         $(this).addClass('active');
         return false;
     });
+
+    
+
+
+    ;(function($, window, document){
+        'use strict';
+        var $slider = $('#carousel_exHome'), hammer = new Hammer($slider.get(0));
+        $slider.find('img').each( (index, elem ) => {
+            $(elem).prop('draggable', false);
+        } );
+        $slider.carousel();
+        $slider.find(".carousel-control-prev").click( (e) => {
+            e.preventDefault();
+            $slider.carousel("prev");
+        } );
+        $slider.find(".carousel-control-next").click( (e) => {
+            e.preventDefault();
+            $slider.carousel("next");
+        } );
+        hammer.on("panleft panright", (e) => {
+            e.preventDefault();
+            if( e.type == 'panleft' ) $slider.carousel("next");
+            if( e.type == 'panright' ) $slider.carousel("prev");
+        } );
+        $slider.find('.carousel-indicators li').click( (e) => {
+            $slider.carousel( $(e.target).data('slide-to') );
+        } );
+    })(jQuery, window, document);
 </script>
 
 {% endblock %}

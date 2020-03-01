@@ -196,9 +196,9 @@ $app->match('/contact', function (Request $request) use ($app) {
             $pesan = \Swift_Message::newInstance()
                 ->setSubject('Hi, Contact Website PT. Hentraco')
                 ->setFrom(array('no-reply@hentraco.com'))
-                ->setTo( array('info@hentraco.com', $data['email']) )
+                ->setTo( array('hentracosby@yahoo.com', $data['email']) )
                 ->setBcc( array('deoryzpandu@gmail.com', 'ibnu@markdesign.net') )
-                ->setReplyTo(array('info@hentraco.com'))
+                ->setReplyTo(array('hentracosby@yahoo.com'))
                 ->setBody($app['twig']->render('page/mail.twig', array(
                     'data' => $data,
                 )), 'text/html');

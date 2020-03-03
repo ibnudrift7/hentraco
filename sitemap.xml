@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://hentraco.com/</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/about</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/location</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/contact</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=1&amp;slug=Lathe+Machine</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=2&amp;slug=Milling+Machine</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=4&amp;slug=CNC+Lathe+Machine</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=3&amp;slug=CNC+Milling+Machine</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=8&amp;slug=EDM+Machine</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=5&amp;slug=Grinding+Machine</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=6&amp;slug=DRO+System</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://hentraco.com/machine_detail?id=7&amp;slug=Others</loc>
+  <lastmod>2020-03-02T06:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

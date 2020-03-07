@@ -638,6 +638,12 @@
 	.form-contact .text-right{
 		float: none; text-align: left;
 	}
+	.ft_top_right p{
+		font-size: 13px;
+	}
+	footer.footer-1 .s-content p br{
+		display: none;
+	}
 
 }
 
